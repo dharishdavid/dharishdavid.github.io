@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Dharish David - CV </title>
+		<meta name="keywords" content="Work Experience; Academic Qualifications; Other Details; Contact Information; 1-page">
+		<meta name="description" content="1-pager CV - Dharish's Experience and Qualifications">
+		<meta name="date" content="2019-08-19"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style type="text/css">
+
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+
+		body {
+			width: 210mm;
+			min-height: 297mm;
+			margin: 0 auto;
+			padding: 14mm 16mm;
+			font-family: 'Roboto', Arial, sans-serif;
+			font-size: 9.5pt;
+			line-height: 1.5;
+			color: #222;
+			background: white;
+		}
+
+		header {
+			margin-bottom: 8px;
+		}
+
+		.name {
+			font-size: 20pt;
+			font-weight: 500;
+			color: #1a1a2e;
+			letter-spacing: 1px;
+		}
+
+		.phd-suffix { font-weight: 400; color: #555; font-size: 13pt; letter-spacing: 0; }
+
+		.title-line {
+			font-size: 9pt;
+			color: #555;
+			margin: 4px 0 6px 0;
+			line-height: 1.5;
+			font-weight: 300;
+		}
+
+		hr.divider {
+			border: none;
+			border-top: 1.5px solid #1a1a2e;
+			margin: 0 0 10px 0;
+		}
+
+		.body-row {
+			display: flex;
+			align-items: stretch;
+		}
+
+		.content-column {
+			width: 73%;
+			margin-right: 2%;
+		}
+
+		section + section {
+			border-top: 3px double #d4c9a8;
+			margin-top: 10px;
+			padding-top: 8px;
+		}
+
+		.content-column h1 + * {
+			border-top: 1px solid #e8dcc8;
+			padding-top: 6px;
+			margin-top: 4px;
+		}
+
+		h1 {
+			display: inline-block;
+			font-size: 10pt;
+			font-weight: 500;
+			color: #1a1a2e;
+			background: white;
+			border: 1px solid #e8dcc8;
+			border-radius: 6px;
+			padding: 4px 14px;
+			margin: 4px 0 6px 0;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			box-shadow: 0 0 0 2px #faf6ed, 0 3px 8px -3px rgba(180, 170, 140, 0.3);
+		}
+
+		.performance p {
+			font-size: 9pt;
+			line-height: 1.5;
+			text-align: justify;
+		}
+
+		h3 {
+			font-size: 9pt;
+			font-weight: 500;
+			color: #1a1a2e;
+			background: #fcfcfc;
+			border: 1px solid #ece8e0;
+			border-radius: 5px;
+			padding: 2px 7px;
+		}
+
+		aside {
+			width: 25%;
+			flex-shrink: 0;
+			padding: 12px 14px;
+			font-size: 8.5pt;
+			line-height: 1.6;
+			background: #eef0f4;
+			border-radius: 3px;
+		}
+
+		aside h1 {
+			display: block;
+			font-size: 9pt;
+			margin: 0 0 5px 0;
+			border: none;
+			padding: 0;
+			background: none;
+			border-radius: 0;
+			box-shadow: none;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		aside hr {
+			border: none;
+			border-top: 1px solid #ddd;
+			margin: 8px 0;
+		}
+
+		aside i.fa { width: 16px; text-align: center; font-size: 10pt; }
+		aside .acad-icon { width: 14px; height: 14px; vertical-align: middle; margin-right: 2px; }
+		aside a { color: #1a73e8; text-decoration: none; }
+
+		.contact-line { margin: 2px 0; }
+		.contact-line a { color: #1a73e8; text-decoration: none; }
+
+		p.special {
+			display: inline-block;
+			font-family: 'Roboto', Arial, sans-serif;
+			font-size: 7.5pt;
+			line-height: 1.4;
+			padding: 2px 7px;
+			margin: 2px 2px;
+			border: 1px solid #2a4365;
+			background: white;
+			color: #2a4365;
+			border-radius: 3px;
+		}
+
+		.experience::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.entry {
+			padding: 8px 0;
+			border-bottom: 1px solid #e8dcc8;
+			box-shadow: 0 3px 5px -3px rgba(180, 170, 140, 0.2);
+		}
+
+		.entry:last-of-type {
+			border-bottom: none;
+			box-shadow: none;
+		}
+
+		.entry::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.entry-left {
+			float: left;
+			width: 30%;
+		}
+
+		.entry-right {
+			float: left;
+			width: 68%;
+			margin-left: 2%;
+		}
+
+		ul { margin: 2px 0 6px 16px; padding: 0; }
+		li { font-size: 9pt; line-height: 1.45; margin-bottom: 3px; text-align: justify; }
+
+		.qual-block { margin-bottom: 3px; font-size: 9pt; }
+		.qual-title { font-weight: 500; }
+		.qual-detail { color: #444; }
+
+		.publications ul { margin-left: 16px; }
+
+		.doc-end {
+			height: 12px;
+			margin-top: 4px;
+			border-bottom: 1px solid #e8dcc8;
+			box-shadow: 0 3px 5px -3px rgba(180, 170, 140, 0.15);
+		}
+
+		@media print {
+			body {
+				width: 100%;
+				margin: 0;
+				padding: 12mm 14mm;
+			}
+			p.special { border: 1px solid #2a4365 !important; background: white !important; }
+			aside { background: #eef0f4 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+		}
+
+	</style>
+
+	</head>
+
+	<body>
+		<header>
+		<div class="name">Dharish David<span class="phd-suffix">, PhD</span></div>
+		<div class="title-line">
+		Associate Director (Research and Analytics) — Global Angle &bull; Faculty — Political Economy, SUSS &amp; SIM-GE<br>
+		Market &amp; Industry Research | Policy Analysis | Consulting | Academia
+		</div>
+		<hr class="divider">
+
+	<div class="body-row">
+
+	<div class="content-column">
+
+	<section class="performance">
+		<h1> Performance Summary </h1>
+		<p>
+			Research and Consulting Project Manager and Associate Director with 15+ years across <b>private market and investment industry research</b>, <b>policy and think tank research</b>, and <b>academia and political economy teaching</b> across Asia Pacific. Leads multi-country consulting and research projects covering 16 industry verticals for governments, MNCs, and SMEs across India, ASEAN, China, and Middle East markets. Previously managed a 25-person analyst team producing 100+ industry reports annually on the SPEEDA platform for institutional investors. Policy research background includes ADBI flagship publications on sustainable development and infrastructure finance, UN Global Compact's sustainable finance strategy in Singapore, and technology policy reports on digital economy and data flows across APAC. Served as Associate Faculty at SUSS and SIM-GE for 8 years teaching political economy, research methodology, and democracy courses. PhD in Infrastructure Development and Financing (Waseda University). Regular contributor to SCMP, East Asia Forum, and Global Policy.
+		</p>
+	</section>
+
+	<section class="experience">
+	<h1> Professional Experience </h1>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Associate Director (Research and Analytics) / Research and Project Manager, Global Angle Pte Ltd.<br> 2022 - Current </h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+					<li>Lead 50+ multi-country engagements — market sizing (TAM-SAM-SOM), competitive intelligence, regulatory analysis, go-to-market strategy, and partnership development with due diligence — for governments and MNCs across ASEAN, India, Middle East, Africa, and USA.</li>
+					<li>Design and execute mixed-methods research combining primary surveys (RAS/IPF sampling, expert interviews, focus groups) with secondary data triangulation; co-authored flagship reports on silver economy, EV landscape, and investment trends, and led Africa market studies on energy access, transport, and infrastructure.</li>
+					<li>Spearheaded AI integration and platform development — deploying agentic AI tools, Google Colab, and AppSheet to build a cost-to-revenue expense log with project dashboards and integrate a freelancer management system, alongside OSINT collection and NLP-assisted analysis.</li>
+					<li>Cultivated government and industry stakeholder relationships leading to repeat contracts and expanded project scope across Southeast Asia, Middle East, and Africa.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Manager — Capacity and Capability Building, Global Compact Network Singapore <br> 2021 </h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+					<li>Developed UN Global Compact's inaugural strategy for sustainable finance and social sustainability in Singapore, aligning with global ESG frameworks and SDG targets.</li>
+					<li>Implemented strategy through multi-stakeholder engagement — managing project milestones, budgets, and resources across research projects, tools, workshops, and capacity-building events for corporate and government partners.</li>
+					<li>Co-developed Sustainable Finance short course with NTU (reaching 100+ professionals) and led two flagship research publications on responsible supply chains and green finance across ASEAN.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Peer Reviewer (Freelance)<br> 2022 - Present </h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+					<li>Peer reviewer for Global Policy, Journal of the Asia Pacific Economy, Economic Analysis and Policy, Digital Policy Regulation and Governance, and other journals across economics, sustainability, public policy, and regulatory governance.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Associate Faculty, SUSS and SIM-Global Education, Singapore <br> 2013 - 2021 </h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+					<li>Designed curriculum, delivered lectures, and assessed students for Bachelor's and Master's programs in Research Methodology, Political Economy of Global Business, Asian Political Economy, and Democracy and Democratization — emphasizing evidence-based policy analysis and critical thinking.</li>
+					<li>Coached and advised students for Harvard National Model United Nations (HNMUN) in Boston, fostering civic engagement and global governance perspective.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Research Consultant, Economic Research Institute for ASEAN and East Asia (ERIA) and Chapter Writer, ADBI <br> 2017 - 2021 </h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+					<li>Designed and deployed multi-country survey across ASEAN markets on private sector challenges in financing the low-carbon energy transition — generating primary data on climate finance barriers.</li>
+					<li>Authored policy-oriented report on low-carbon financing trends in Asia and contributed to Realizing Smart Cities in Asia project, combining sustainability, infrastructure, and technology analysis.</li>
+					<li>Contributed chapter to Handbook on Green Finance, synthesizing research on climate-aligned investment frameworks.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Research Lead and Global Partnerships Outreach, DQ Institute, Singapore <br> 2019 </h3>
+		</div>
+
+		<div class="entry-right">
+		<ul>
+					<li>Secured grants from government and corporate partners by developing project proposals and impact reports, directly funding public outreach initiatives and digital product development.</li>
+					<li>Co-authored white papers at the intersection of economics, public policy, and technology, translating research into actionable insights for diverse stakeholders.</li>
+					<li>Developed Digital Intelligence (DQ) metrics and led coordination for IEEE global standards on digital literacy, skills, and readiness; contributed to workforce mobile product prototype.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Policy Research Analyst & Business Outreach Project Coordinator, TRPC, Singapore <br> 2016 - 2017 </h3>
+	</div>
+
+		<div class="entry-right">
+		<ul>
+						<li>Drove stakeholder outreach and conference programming for the Asia Cloud Computing Association (ACCA) across data analytics, digital transformation, cloud computing, financial services, smart cities, and IoT — engaging policymakers and industry leaders across APAC.</li>
+						<li>Authored technology policy reports on digital economy, fintech, regtech, and cross-border data flows across APAC, ASEAN, and South Asia — contributing to evidence-based regulatory discussions.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Research Manager/Director Singapore Office, Uzabase Asia Pacific, Singapore <br> 2014 - 2016
+		</h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+					<li>Directed production of 100+ industry and economic insight reports on the SPEEDA platform covering 16 industry verticals (SIC and HS code) across India, ASEAN, and Asia — delivering in-depth industry analysis for institutional investors and global investment firms.</li>
+					<li>Led a team of 25 analysts across Singapore and Tokyo, improved workflow and reporting processes, and conducted regular training in economics, regulations, and industry analysis to enhance team capability and report quality.</li>
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Research Associate, Asian Development Bank Institute, Tokyo, Japan <br> 2010 - 2012 </h3>		</div>
+		<div class="entry-right">
+		<ul>
+		 <li> Contributed to ADBI flagship publications on sustainable development, energy policy, poverty reduction, and infrastructure development across Asia (ASEAN, India, and China) — producing evidence-based policy research for Asia's development agenda.
+		 <li> Managed full publication lifecycle: concept note development, commissioning and quality assurance of background papers, data collection and quantitative analysis, conference production, and case study preparation.
+		<li> Liaised with government policymakers, researchers, and civil society stakeholders to organize ADBI conferences, regional policy forums, roundtables, and capacity-building workshops across Asia.
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Business Development Researcher, PADECO, Tokyo, Japan <br> 2008 - 2010 </h3>
+	</div>
+		<div class="entry-right">
+		<ul>
+		<li> Supported feasibility studies and technical reports for infrastructure, education, environment, and poverty reduction projects worldwide — maintaining project data across ICT, transport, urban development, and tourism sectors.
+		<li> Contributed to project proposals, RFPs, and field studies through research and data analysis for international development projects funded by the World Bank, ADB, JBIC, and JICA.
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Teaching Associate, Waseda University, Tokyo, Japan<br> 2006 - 2009 </h3>
+	</div>
+		<div class="entry-right">
+		<ul>
+		<li> Co-designed curriculum, taught research methodology, and evaluated students for courses at Waseda University's Graduate School of Asia Pacific Studies.
+		</ul>
+		</div>
+		</div>
+
+		<div class="entry">
+		<div class="entry-left">
+		<h3> Market and Business Research Analyst, Evalueserve/Vertex, Gurgaon, India <br> 2003 - 2006 </h3>
+		</div>
+		<div class="entry-right">
+		<ul>
+		<li> Conducted market surveys with C-level technology leaders and provided research for outsourced business operations across North America, Europe, and East Asia.
+		</ul>
+		</div>
+		</div>
+	</section>
+
+	<section>
+		<h1> Academic Qualifications </h1>
+
+		<div class="qual-block"><span class="qual-title">PhD in International Studies</span> <span class="qual-detail">— Waseda University, Tokyo, Japan (2011). Specialization in Economic Development &amp; Infrastructure Development.</span></div>
+		<div class="qual-block"><span class="qual-title">MPhil in Japanese Area Studies</span> <span class="qual-detail">— Jawaharlal Nehru University (JNU), India (2003).</span></div>
+		<div class="qual-block"><span class="qual-title">MA in Politics and International Relations</span> <span class="qual-detail">— Pondicherry Central University, India (2001).</span></div>
+		<div class="qual-block"><span class="qual-title">BSc in Biotechnology</span> <span class="qual-detail">— American College, India (1999).</span></div>
+	</section>
+
+	<section class="publications">
+		<h1> Publications </h1>
+		<ul>
+			<li>GoImpact, CUHK Business School, and Ant Group (2023). <em>The Intersection of Green, Fin, and Tech: A Study across 5 APEC Economies.</em> (Lead author)</li>
+			<li>GCNS and Accenture (2022). <em>Building Responsible and Resilient Supply Chains in ASEAN.</em> (Lead author)</li>
+			<li>David, D., Rajeshwari, B., &amp; S., T. (2025). Algorithmic Bias and Discrimination in India: A Looming Crisis. <em>Journal of Development Policy and Practice.</em></li>
+			<li>David Dharish and Abhishek Pandey (2025). China's Assertive Posturing in the Indo-Pacific &amp; Prospects for Indo-ASEAN Collaboration. KW Publishers.</li>
+			<li>"Artificial Intelligence, Public Policy, and Governance" <em>(forthcoming 2026)</em></li>
+		</ul>
+		<p style="margin: 4px 0 0 16px; font-size: 9pt;"><b>Selected Op-Eds &amp; Commentary</b></p>
+		<ul>
+			<li>David, D., &amp; S., T. (2024). Belt and Road's Democratic Dilemma: Unraveling China's Infrastructure Influence in East Asia. <em>Global Policy Journal.</em></li>
+			<li>David, D., &amp; LoCastro, M. (2020). For Asia, low-carbon energy is both a priority and one of the greatest regional challenges. <em>South China Morning Post.</em></li>
+			<li>Full publication list: <a href="https://www.linkedin.com/in/dharishdavid/" target="_blank">linkedin.com/in/dharishdavid</a></li>
+		</ul>
+	</section>
+
+	<div class="doc-end"></div>
+
+	</div> <!-- .content-column -->
+
+	<aside>
+	<h1> Contact </h1>
+		<div class="contact-line"><a href="tel:6582014464"><i class="fa fa-phone-square"></i> +65 8201 4464</a></div>
+		<div class="contact-line"><a href="mailto:dharish.david@gmail.com"><svg class="acad-icon" viewBox="0 0 24 24"><path fill="#EA4335" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> dharish.david</a></div>
+		<div class="contact-line"><a href="https://www.linkedin.com/in/dharishdavid/" target="_blank"><i class="fa fa-linkedin-square"></i> dharishdavid</a></div>
+		<div class="contact-line"><a href="https://www.google.com/maps?q=Singapore+670654" target="_blank"><svg class="acad-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Singapore</a></div>
+		<div class="contact-line"><svg class="acad-icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="white" stroke="#E2262D" stroke-width="1.2"/><rect x="2" y="5" width="20" height="4" rx="2" fill="#E2262D"/><circle cx="7" cy="14" r="2" fill="none" stroke="#E2262D" stroke-width="0.7"/><rect x="11" y="12.5" width="8" height="0.7" rx="0.35" fill="#bbb"/><rect x="11" y="14.5" width="6" height="0.7" rx="0.35" fill="#bbb"/><rect x="11" y="16.5" width="4" height="0.7" rx="0.35" fill="#bbb"/></svg> Singapore PR</div>
+		<hr>
+
+	<h1> Market &amp; Industry Research </h1>
+			<p class="special"> Multi-sector research (based on SIC) <p class="special"> Competitive &amp; business intelligence <p class="special"> Consulting &amp; advisory <p class="special"> Market sizing &amp; modelling <p class="special"> TAM-SAM-SOM analysis <p class="special"> RAS/IPF sampling <p class="special"> OSINT &amp; risk analysis <p class="special"> Quant &amp; qual research <p class="special"> Survey design &amp; interviews <p class="special"> Industry research for investment decisions <p class="special"> Feasibility &amp; due diligence <p class="special"> Report production &amp; QC
+
+	<h1> Management &amp; Leadership </h1>
+			<p class="special"> Lead 25-member analyst team <p class="special"> Project &amp; programme management <p class="special"> Resource management &amp; budgeting <p class="special"> Milestone &amp; timeline management <p class="special"> Stakeholder management <p class="special"> Risk assessment &amp; mitigation <p class="special"> Scope &amp; change management <p class="special"> KPI &amp; performance management <p class="special"> Process improvement &amp; SOPs <p class="special"> Business development <p class="special"> Cross-cultural leadership <p class="special"> Training &amp; capacity building
+
+	<h1> Technical </h1>
+			<p class="special"> R (data analysis &amp; viz) <p class="special"> Python &amp; Jupyter <p class="special"> Google Colab <p class="special"> Agentic AI &amp; workflow automation <p class="special"> AI-powered data analysis &amp; visualisation <p class="special"> OSINT tools &amp; methods <p class="special"> Tableau <p class="special"> Survey design &amp; implementation <p class="special"> MS Office Suite <p class="special"> Google Apps &amp; automation <p class="special"> Slack, Trello &amp; collaboration tools <p class="special"> HTML, CSS &amp; web
+		<hr>
+
+	<h1> Policy &amp; Strategy </h1>
+			<p class="special"> Policy &amp; regulatory analysis <p class="special"> Evidence-based policy research <p class="special"> Sustainable development &amp; ESG <p class="special"> ESG disclosure &amp; reporting (TCFD, GRI, ISSB) <p class="special"> Infrastructure finance &amp; PPPs <p class="special"> Technology &amp; digital policy <p class="special"> Stakeholder engagement <p class="special"> Grant &amp; proposal development <p class="special"> Thought leadership &amp; white papers
+		<hr>
+
+	<h1> Research Interests </h1>
+			<p class="special"> Political economy of Asia <p class="special"> Economic development <p class="special"> Infrastructure finance <p class="special"> Public finance &amp; PPPs <p class="special"> Climate finance <p class="special"> Financial systems <p class="special"> International relations <p class="special"> Democracy &amp; governance <p class="special"> ESG &amp; sustainability <p class="special"> Digital transformation <p class="special"> Policy analysis <p class="special"> Japan &amp; India area studies
+
+	<h1> Academic &amp; Teaching </h1>
+			<p class="special"> Curriculum design <p class="special"> Research methodology training <p class="special"> Political economy analysis <p class="special"> Student mentorship <p class="special"> Publication management <p class="special"> Academic &amp; op-ed writing
+		<hr>
+
+	<h1> Interests </h1>
+			<p class="special"> Basketball / Tennis / Futsal <p class="special"> Data science <p class="special"> Long distance running <p class="special"> Street photography <p class="special"> Motorbike travel <p class="special"> Low-carbon lifestyle
+
+	</aside>
+
+	</div> <!-- .body-row -->
+
+	</body>
+</html>
