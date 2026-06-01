@@ -8,11 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', -apple-system, sans-serif; background: #f8f9fb; color: #1a1a2e; line-height: 1.6; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; color: #1a1a2e; line-height: 1.6; }
 .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
 
 /* Hero */
-.hero { background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%); color: #fff; padding: 72px 0 56px; text-align: center; }
+.hero { background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%); color: #fff; padding: 72px 0 56px; text-align: center; position: relative; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #d4c9a8, #e8dcc8, #d4c9a8); }
 .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
 .hero .suffix { font-weight: 300; color: rgba(255,255,255,0.65); }
 .hero .tagline { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
@@ -21,26 +22,31 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #f8f9fb; col
 /* Content */
 .content { padding: 48px 0; }
 
+/* Section headings */
+.section-heading { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 16px; }
+
 /* Bio */
-.bio { background: #fff; border-radius: 12px; padding: 32px; margin-bottom: 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-.bio h2 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 12px; }
+.bio { background: #fff; border-radius: 12px; padding: 32px; margin-bottom: 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; }
+.bio h2 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 14px; }
 .bio p { font-size: 15px; color: #444; margin-bottom: 12px; }
 .bio p:last-child { margin-bottom: 0; }
 
 /* CV Links */
 .cv-links { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
-.cv-card { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-.cv-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
-.cv-card .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #1a73e8; margin-bottom: 6px; }
+.cv-card { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: all 0.25s; text-decoration: none; color: inherit; display: flex; flex-direction: column; border: 1px solid #edeae2; }
+.cv-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); transform: translateY(-3px); border-color: #d4c9a8; }
+.cv-card .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8b7e6a; margin-bottom: 6px; }
 .cv-card h3 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; }
 .cv-card p { font-size: 14px; color: #666; line-height: 1.5; flex: 1; }
-.cv-card .arrow { margin-top: 16px; font-size: 14px; color: #1a73e8; font-weight: 500; }
+.cv-card .arrow { margin-top: 16px; font-size: 14px; color: #8b7e6a; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.cv-card:hover .arrow { color: #1a1a2e; }
 
 /* Footer */
-footer { border-top: 1px solid #e8e8e8; padding: 32px 0; text-align: center; }
-footer .social { margin-bottom: 12px; }
-footer .social a { color: #888; text-decoration: none; font-size: 14px; margin: 0 12px; transition: color 0.2s; }
-footer .social a:hover { color: #1a1a2e; }
+footer { border-top: 1px solid #e8e0d0; padding: 32px 0; text-align: center; }
+footer .social { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+footer .social a { display: inline-flex; align-items: center; gap: 6px; color: #666; text-decoration: none; font-size: 13px; padding: 8px 14px; border-radius: 8px; transition: all 0.2s; }
+footer .social a:hover { background: #f0ece4; color: #1a1a2e; }
+footer .social a svg { flex-shrink: 0; }
 footer .copy { font-size: 12px; color: #aaa; }
 
 @media (max-width: 600px) {
@@ -48,6 +54,7 @@ footer .copy { font-size: 12px; color: #aaa; }
   .hero h1 { font-size: 30px; }
   .cv-links { grid-template-columns: 1fr; }
   .bio { padding: 24px; }
+  footer .social a { padding: 6px 10px; font-size: 12px; }
 }
 </style>
 </head>
@@ -70,20 +77,22 @@ footer .copy { font-size: 12px; color: #aaa; }
       <p>PhD in Infrastructure Development and Financing (Waseda University). Former manager of a 25-person analyst team producing 100+ industry reports annually. Associate Faculty at SUSS and SIM-GE. Regular contributor to <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
     </div>
 
+    <p class="section-heading">Curriculum Vitae</p>
+
     <div class="cv-links">
 
       <a class="cv-card" href="short-cv.html">
         <span class="label">1-page overview</span>
         <h3>Short CV</h3>
         <p>Concise professional summary covering experience, core competencies, key engagements, and qualifications.</p>
-        <span class="arrow">View &rarr;</span>
+        <span class="arrow">View <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
 
       <a class="cv-card" href="detailed-cv.html">
         <span class="label">Full dossier</span>
         <h3>Detailed CV</h3>
         <p>Comprehensive career history with full project descriptions, publications, conference presentations, and academic background.</p>
-        <span class="arrow">View &rarr;</span>
+        <span class="arrow">View <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
 
     </div>
@@ -94,11 +103,32 @@ footer .copy { font-size: 12px; color: #aaa; }
 <footer>
   <div class="container">
     <div class="social">
-      <a href="https://www.researchgate.net/profile/Dharish-David">ResearchGate</a>
-      <a href="https://orcid.org/0000-0001-7903-0285">ORCID</a>
-      <a href="https://scholar.google.com/citations?user=ES8OvUYAAAAJ">Google Scholar</a>
-      <a href="https://linkedin.com/in/dharishdavid">LinkedIn</a>
-      <a href="https://github.com/dharishdavid">GitHub</a>
+
+      <a href="https://www.researchgate.net/profile/Dharish-David" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#00CCBB"><path d="M20.996 9.962c-1.193-3.79-4.547-6.584-8.574-6.962-4.867-.459-9.291 3.118-9.748 8.007-.458 4.888 3.117 9.295 7.986 9.747 2.797.26 5.364-.571 7.375-2.138l-2.018-2.404c-1.312 1.134-2.912 1.735-4.557 1.607-2.621-.205-4.772-2.411-4.985-5.041-.214-2.63 1.584-4.867 4.172-5.208 1.527-.201 3.119.222 4.342 1.202l2.024-2.404c-.786-.659-1.693-1.167-2.677-1.506z"/></svg>
+        ResearchGate
+      </a>
+
+      <a href="https://orcid.org/0000-0001-7903-0285" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#A6CE39"><circle cx="12" cy="12" r="11"/><path fill="#fff" d="M7.36 6.4h1.88v11.2H7.36V6.4zm5.52 0h-2.08v11.2h2.08c3.52 0 5.44-2.44 5.44-5.64 0-3.2-1.92-5.56-5.44-5.56zm1.32 8.88c-.7 0-1.27-.19-1.71-.57-.44-.38-.66-.89-.66-1.53 0-.46.1-.86.3-1.22.2-.36.48-.65.84-.86.36-.21.78-.32 1.26-.32.56 0 1.04.14 1.44.42.4.28.68.68.84 1.2.08.28.12.56.12.84 0 .64-.22 1.18-.66 1.62-.46.44-1.04.56-1.67.42z"/></svg>
+        ORCID
+      </a>
+
+      <a href="https://scholar.google.com/citations?user=ES8OvUYAAAAJ" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#4285F4"><path d="M5.6 9.2l6.4-4.8 6.4 4.8v8.4H16v-6H9v6H5.6V9.2z"/><path d="M5.6 17.6h12.8v1.6H5.6z"/></svg>
+        Google Scholar
+      </a>
+
+      <a href="https://linkedin.com/in/dharishdavid" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/dharishdavid" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#333"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+
     </div>
     <p class="copy">&copy; 2026 Dharish David</p>
   </div>
