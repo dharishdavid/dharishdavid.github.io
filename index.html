@@ -12,15 +12,15 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
 
 /* Hero */
-.hero { background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%); color: #fff; padding: 72px 0 56px; text-align: center; position: relative; }
-.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #d4c9a8, #e8dcc8, #d4c9a8); }
+.hero { background: linear-gradient(180deg, #1a1a2e 0%, #1a1a2e 45%, rgba(26,26,46,0.55) 70%, transparent 100%); color: #fff; padding: 72px 0 90px; text-align: center; position: relative; }
+.hero::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 60px; width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #d4c9a8, transparent); border-radius: 2px; }
 .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
 .hero .suffix { font-weight: 300; color: rgba(255,255,255,0.65); }
 .hero .tagline { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
 .hero .locality { font-size: 14px; color: rgba(255,255,255,0.5); }
 
 /* Content */
-.content { padding: 48px 0; }
+.content { padding: 24px 0 48px; }
 
 /* Section headings */
 .section-heading { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 16px; }
@@ -50,7 +50,7 @@ footer .social a svg { flex-shrink: 0; }
 footer .copy { font-size: 12px; color: #aaa; }
 
 @media (max-width: 600px) {
-  .hero { padding: 48px 0 36px; }
+  .hero { padding: 48px 0 64px; }
   .hero h1 { font-size: 30px; }
   .cv-links { grid-template-columns: 1fr; }
   .bio { padding: 24px; }
