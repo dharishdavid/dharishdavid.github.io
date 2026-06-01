@@ -12,12 +12,12 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
 
 /* Hero */
-.hero { background: linear-gradient(90deg, #000 0%, #1a1a2e 100%); color: #fff; padding: 72px 0 64px; text-align: center; position: relative; }
+.hero { background: linear-gradient(90deg, #fdf5e6 0%, #f5e6c8 50%, #ede0b8 100%); color: #1a1a2e; padding: 72px 0 56px; text-align: center; position: relative; }
 .hero::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #d4c9a8, transparent); border-radius: 2px; }
-.hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
-.hero .suffix { font-weight: 300; color: rgba(255,255,255,0.65); }
-.hero .tagline { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
-.hero .locality { font-size: 14px; color: rgba(255,255,255,0.5); }
+.hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; color: #1a1a2e; }
+.hero .suffix { font-weight: 300; color: rgba(26,26,46,0.5); }
+.hero .tagline { font-size: 17px; font-weight: 300; color: rgba(26,26,46,0.7); margin-bottom: 6px; }
+.hero .locality { font-size: 14px; color: rgba(26,26,46,0.45); }
 
 /* Content */
 .content { padding: 48px 0; }
@@ -50,7 +50,7 @@ footer .social a svg { flex-shrink: 0; }
 footer .copy { font-size: 12px; color: #aaa; }
 
 @media (max-width: 600px) {
-  .hero { padding: 48px 0 40px; }
+  .hero { padding: 48px 0 36px; }
   .hero h1 { font-size: 30px; }
   .cv-links { grid-template-columns: 1fr; }
   .bio { padding: 24px; }
