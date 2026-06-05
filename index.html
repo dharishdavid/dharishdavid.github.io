@@ -3,43 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dharish David — Research & Consulting</title>
+<title>Dharish David PhD — Research & Consulting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; color: #1a1a2e; line-height: 1.6; }
-.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
 /* Hero */
-.hero { background: linear-gradient(90deg, #fdf5e6 0%, #f5e6c8 50%, #ede0b8 100%); color: #1a1a2e; padding: 72px 0 56px; text-align: center; position: relative; }
-.hero::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #d4c9a8, transparent); border-radius: 2px; }
-.hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; color: #1a1a2e; }
-.hero .suffix { font-weight: 300; color: rgba(26,26,46,0.5); }
-.hero .tagline { font-size: 17px; font-weight: 300; color: rgba(26,26,46,0.7); margin-bottom: 6px; }
+.hero { background: linear-gradient(135deg, #fdf5e6 0%, #f5e6c8 50%, #ede0b8 100%); padding: 60px 0 48px; text-align: center; position: relative; }
+.hero::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #d4c9a8, transparent); }
+.hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 16px; }
+.hero h1 { font-size: 36px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.5px; }
+.hero .suffix { font-weight: 400; color: rgba(26,26,46,0.5); font-size: 28px; }
+.hero .tagline { font-size: 16px; color: rgba(26,26,46,0.7); margin: 6px 0 4px; font-weight: 400; }
 .hero .locality { font-size: 14px; color: rgba(26,26,46,0.45); }
+
+/* Stats Bar */
+.stats { background: #1a1a2e; color: #fff; padding: 28px 0; }
+.stats .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center; }
+.stats .stat-num { font-size: 28px; font-weight: 700; color: #f5e6c8; }
+.stats .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
 
 /* Content */
 .content { padding: 48px 0; }
 
-/* Section headings */
-.section-heading { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 16px; }
+/* Section */
+.section { margin-bottom: 40px; }
+.section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 20px; }
 
-/* Bio */
-.bio { background: #fff; border-radius: 12px; padding: 32px; margin-bottom: 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; }
-.bio h2 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 14px; }
-.bio p { font-size: 15px; color: #444; margin-bottom: 12px; }
-.bio p:last-child { margin-bottom: 0; }
+/* About */
+.about-card { background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; }
+.about-card p { font-size: 15px; color: #444; margin-bottom: 14px; }
+.about-card p:last-child { margin-bottom: 0; }
 
-/* CV Links */
-.cv-links { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
-.cv-card { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: all 0.25s; text-decoration: none; color: inherit; display: flex; flex-direction: column; border: 1px solid #edeae2; }
-.cv-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); transform: translateY(-3px); border-color: #d4c9a8; }
-.cv-card .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8b7e6a; margin-bottom: 6px; }
-.cv-card h3 { font-size: 20px; font-weight: 600; color: #1a1a2e; margin-bottom: 8px; }
-.cv-card p { font-size: 14px; color: #666; line-height: 1.5; flex: 1; }
-.cv-card .arrow { margin-top: 16px; font-size: 14px; color: #8b7e6a; font-weight: 500; display: flex; align-items: center; gap: 6px; }
-.cv-card:hover .arrow { color: #1a1a2e; }
+/* Cards grid */
+.card-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+.card-grid-3 { display: grid; gap: 16px; grid-template-columns: 1fr 1fr 1fr; }
+.card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; transition: all 0.25s; }
+.card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); transform: translateY(-2px); border-color: #d4c9a8; }
+.card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 18px; }
+.card h3 { font-size: 16px; font-weight: 600; color: #1a1a2e; margin-bottom: 10px; }
+.card p, .card li { font-size: 13px; color: #555; line-height: 1.6; }
+.card ul { list-style: none; padding: 0; }
+.card li { padding: 4px 0; padding-left: 16px; position: relative; }
+.card li::before { content: '—'; position: absolute; left: 0; color: #d4c9a8; }
+
+/* Skill card colors */
+.card-icon.blue { background: #e8edf5; color: #1a73e8; }
+.card-icon.green { background: #e6f0ea; color: #2e7d5e; }
+.card-icon.amber { background: #f5efe0; color: #b8860b; }
+.card-icon.rose { background: #f5e8ea; color: #b34a5c; }
+.card-icon.indigo { background: #e8e8f5; color: #4a4ab3; }
+.card-icon.teal { background: #e0f0f0; color: #0d7373; }
+
+/* Milestones */
+.milestones { display: grid; gap: 16px; }
+.milestone { display: flex; gap: 16px; background: #fff; border-radius: 16px; padding: 24px 28px; border: 1px solid #edeae2; transition: all 0.25s; }
+.milestone:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #d4c9a8; }
+.milestone-year { font-size: 13px; font-weight: 700; color: #d4c9a8; white-space: nowrap; min-width: 70px; padding-top: 2px; }
+.milestone-content h3 { font-size: 15px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+.milestone-content p { font-size: 13px; color: #555; line-height: 1.5; }
+
+/* Placeholder */
+.placeholder { opacity: 0.6; position: relative; }
+.placeholder::after { content: 'Coming soon'; position: absolute; top: 16px; right: 16px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #998e7a; background: #f5f0e6; padding: 3px 10px; border-radius: 20px; }
+
+/* CV links row */
+.cv-row { display: flex; gap: 12px; margin-top: 8px; }
+.cv-row a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: #fff; border: 1px solid #edeae2; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 500; color: #1a1a2e; transition: all 0.2s; }
+.cv-row a:hover { border-color: #d4c9a8; background: #faf8f5; }
 
 /* Footer */
 footer { border-top: 1px solid #e8e0d0; padding: 32px 0; text-align: center; }
@@ -49,12 +83,17 @@ footer .social a:hover { background: #f0ece4; color: #1a1a2e; }
 footer .social a svg { flex-shrink: 0; }
 footer .copy { font-size: 12px; color: #aaa; }
 
-@media (max-width: 600px) {
-  .hero { padding: 48px 0 36px; }
-  .hero h1 { font-size: 30px; }
-  .cv-links { grid-template-columns: 1fr; }
-  .bio { padding: 24px; }
-  footer .social a { padding: 6px 10px; font-size: 12px; }
+@media (max-width: 700px) {
+  .hero { padding: 40px 0 32px; }
+  .hero h1 { font-size: 28px; }
+  .hero .suffix { font-size: 22px; }
+  .stats .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stats .stat-num { font-size: 22px; }
+  .card-grid, .card-grid-3 { grid-template-columns: 1fr; }
+  .milestone { flex-direction: column; gap: 6px; }
+  .milestone-year { min-width: auto; }
+  .about-card { padding: 24px; }
+  .cv-row { flex-direction: column; }
 }
 </style>
 </head>
@@ -62,39 +101,170 @@ footer .copy { font-size: 12px; color: #aaa; }
 
 <section class="hero">
   <div class="container">
+    <img class="hero-photo" src="https://asiapowerwatch.com/wp-content/uploads/2020/10/Dharish-David.jpg" alt="Dharish David">
     <h1>Dharish David <span class="suffix">PhD</span></h1>
-    <p class="tagline">Research &amp; Consulting Project Manager · Associate Director</p>
+    <p class="tagline">Associate Director · Research &amp; Consulting · Faculty</p>
     <p class="locality"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-1px;margin-right:3px"><path d="M8 0C5.2 0 3 2.2 3 5c0 3.8 5 11 5 11s5-7.2 5-11c0-2.8-2.2-5-5-5zm0 7.5C6.6 7.5 5.5 6.4 5.5 5S6.6 2.5 8 2.5 10.5 3.6 10.5 5 9.4 7.5 8 7.5z"/></svg> Singapore</p>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="grid">
+      <div><div class="stat-num">67</div><div class="stat-label">Projects</div></div>
+      <div><div class="stat-num">45</div><div class="stat-label">Countries</div></div>
+      <div><div class="stat-num">$1M+</div><div class="stat-label">Client Revenue</div></div>
+      <div><div class="stat-num">41</div><div class="stat-label">Clients</div></div>
+    </div>
   </div>
 </section>
 
 <section class="content">
   <div class="container">
 
-    <div class="bio">
-      <h2>About</h2>
-      <p>15+ years leading multi-country research and consulting engagements across private markets, policy think tanks, and academia. Covers 16 industry verticals for governments, MNCs, and SMEs across India, ASEAN, China, the Middle East, and Africa.</p>
-      <p>PhD in Infrastructure Development and Financing (Waseda University). Former manager of a 25-person analyst team producing 100+ industry reports annually. Associate Faculty at SUSS and SIM-GE. Regular contributor to <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
+    <!-- About -->
+    <div class="section">
+      <div class="section-title">About</div>
+      <div class="about-card">
+        <p>Associate Director and Project Manager with 15+ years at the intersection of <strong>private sector research</strong>, <strong>policy analysis</strong>, <strong>academia</strong>, and <strong>AI-driven consulting</strong>. Leads multi-country engagements for governments, MNCs, and SMEs — delivering market intelligence, partnership strategy, and go-to-market execution across Asia, Africa, and the Middle East.</p>
+        <p>PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Former manager of a 25-person analyst team at Uzabase/SPEEDA. Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> (8 years). Policy research at <strong>ADBI</strong>, <strong>UN Global Compact</strong>, and <strong>ERIA</strong>.</p>
+      </div>
     </div>
 
-    <p class="section-heading">Curriculum Vitae</p>
+    <!-- Core Capabilities -->
+    <div class="section">
+      <div class="section-title">Core Capabilities</div>
+      <div class="card-grid">
 
-    <div class="cv-links">
+        <div class="card">
+          <div class="card-icon blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/></svg>
+          </div>
+          <h3>Market &amp; Industry Research</h3>
+          <ul>
+            <li>Multi-sector research across 16 verticals (SIC/HS code)</li>
+            <li>Market sizing &mdash; TAM-SAM-SOM analysis, RAS/IPF sampling</li>
+            <li>Competitive intelligence, regulatory analysis, due diligence</li>
+            <li>Primary research: KOL interviews, focus groups, field surveys</li>
+          </ul>
+        </div>
 
-      <a class="cv-card" href="short-cv.html">
-        <span class="label">1-page overview</span>
-        <h3>Short CV</h3>
-        <p>Concise professional summary covering experience, core competencies, key engagements, and qualifications.</p>
-        <span class="arrow">View <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+        <div class="card">
+          <div class="card-icon green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>Strategy &amp; Partnerships</h3>
+          <ul>
+            <li>Go-to-market strategy and business development</li>
+            <li>Strategic partnerships &amp; M&amp;A partner search (India, KSA, Africa)</li>
+            <li>Geographic expansion: MENA, sub-Saharan Africa, SE Asia</li>
+            <li>Stakeholder engagement: government, MNC, multilateral</li>
+          </ul>
+        </div>
 
-      <a class="cv-card" href="detailed-cv.html">
-        <span class="label">Full dossier</span>
-        <h3>Detailed CV</h3>
-        <p>Comprehensive career history with full project descriptions, publications, conference presentations, and academic background.</p>
-        <span class="arrow">View <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+        <div class="card">
+          <div class="card-icon amber">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>AI &amp; Digital Transformation</h3>
+          <ul>
+            <li>AI integration strategy: displacement matrix for 50+ functions</li>
+            <li>Human-in-the-loop workflows (Perplexity, ChatGPT, Gemini)</li>
+            <li>Data-as-a-Service (DaaS) 3-tier framework</li>
+            <li>AppSheet no-code automation, SOP library design</li>
+          </ul>
+        </div>
 
+        <div class="card">
+          <div class="card-icon rose">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6V2M8 10V6M16 10V6M12 14v4M8 18v-2M16 18v-2"/><rect x="2" y="10" width="20" height="12" rx="2"/></svg>
+          </div>
+          <h3>Operations &amp; Infrastructure</h3>
+          <ul>
+            <li>100+ researcher network across 20+ countries</li>
+            <li>Cost-management &amp; real-time profitability tracking</li>
+            <li>Freelancer platform strategy (Stoke/Fiverr/Upwork)</li>
+            <li>Training academy, QA checkpoints, 360 feedback systems</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Milestones -->
+    <div class="section">
+      <div class="section-title">Career Milestones</div>
+      <div class="milestones">
+
+        <div class="milestone">
+          <div class="milestone-year">2011</div>
+          <div class="milestone-content">
+            <h3>PhD in Infrastructure Development &amp; Financing</h3>
+            <p>Waseda University, Tokyo, Japan. Dissertation on public-private partnerships and infrastructure finance in Asia. Research Associate at ADBI on flagship publications for Asia's development agenda.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-year">2014–16</div>
+          <div class="milestone-content">
+            <h3>Research Manager, Uzabase/SPEEDA</h3>
+            <p>Led 25-person analyst team across Singapore and Tokyo. Directed production of 100+ industry reports annually for institutional investors. Built team capability through structured training programmes.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-year">2021</div>
+          <div class="milestone-content">
+            <h3>Manager, UN Global Compact Network Singapore</h3>
+            <p>Developed Singapore's inaugural sustainable finance strategy. Co-developed NTU Sustainable Finance short course. Led flagship research on responsible supply chains and green finance across ASEAN.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-year">2022–26</div>
+          <div class="milestone-content">
+            <h3>Associate Director, Global Angle</h3>
+            <p>Delivered <strong>$1M+ in client revenue</strong> across 67 projects in 45 countries. Built operational infrastructure from scratch: AI strategy, DaaS framework, SOP library, AppSheet tracker, 100+ researcher network, strategic partnerships across India, KSA, Mauritius, and Turkey. EMIS panel speaker on AI in market research.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Cards row -->
+    <div class="section">
+      <div class="section-title">Portfolio</div>
+      <div class="card-grid-3">
+
+        <a class="card" href="detailed-cv.html#publications" style="text-decoration:none;color:inherit">
+          <div class="card-icon indigo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
+          </div>
+          <h3>Publications</h3>
+          <p>Peer-reviewed articles, white papers, and op-eds on green fintech, responsible supply chains, AI governance, and political economy of Asia.</p>
+        </a>
+
+        <div class="card placeholder">
+          <div class="card-icon teal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Conferences &amp; Workshops</h3>
+          <p>Panelist and speaker at UNDP, ERIA, ADBI, EMIS, CAREC Institute, and university-hosted conferences across Asia.</p>
+        </div>
+
+        <div class="card placeholder">
+          <div class="card-icon amber">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Projects</h3>
+          <p>67 multi-country engagements spanning market intelligence, feasibility studies, regulatory analysis, and partnership strategy.</p>
+        </div>
+
+      </div>
+      <div class="cv-row">
+        <a href="short-cv.html">View Short CV &rarr;</a>
+        <a href="detailed-cv.html">View Detailed CV &rarr;</a>
+      </div>
     </div>
 
   </div>
@@ -103,32 +273,26 @@ footer .copy { font-size: 12px; color: #aaa; }
 <footer>
   <div class="container">
     <div class="social">
-
       <a href="https://www.researchgate.net/profile/Dharish-David" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#00CCBB"><path d="M20.996 9.962c-1.193-3.79-4.547-6.584-8.574-6.962-4.867-.459-9.291 3.118-9.748 8.007-.458 4.888 3.117 9.295 7.986 9.747 2.797.26 5.364-.571 7.375-2.138l-2.018-2.404c-1.312 1.134-2.912 1.735-4.557 1.607-2.621-.205-4.772-2.411-4.985-5.041-.214-2.63 1.584-4.867 4.172-5.208 1.527-.201 3.119.222 4.342 1.202l2.024-2.404c-.786-.659-1.693-1.167-2.677-1.506z"/></svg>
         ResearchGate
       </a>
-
       <a href="https://orcid.org/0000-0001-7903-0285" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#A6CE39"><circle cx="12" cy="12" r="11"/><path fill="#fff" d="M7.36 6.4h1.88v11.2H7.36V6.4zm5.52 0h-2.08v11.2h2.08c3.52 0 5.44-2.44 5.44-5.64 0-3.2-1.92-5.56-5.44-5.56zm1.32 8.88c-.7 0-1.27-.19-1.71-.57-.44-.38-.66-.89-.66-1.53 0-.46.1-.86.3-1.22.2-.36.48-.65.84-.86.36-.21.78-.32 1.26-.32.56 0 1.04.14 1.44.42.4.28.68.68.84 1.2.08.28.12.56.12.84 0 .64-.22 1.18-.66 1.62-.46.44-1.04.56-1.67.42z"/></svg>
         ORCID
       </a>
-
       <a href="https://scholar.google.com/citations?user=ES8OvUYAAAAJ" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#4285F4"><path d="M5.6 9.2l6.4-4.8 6.4 4.8v8.4H16v-6H9v6H5.6V9.2z"/><path d="M5.6 17.6h12.8v1.6H5.6z"/></svg>
         Google Scholar
       </a>
-
       <a href="https://linkedin.com/in/dharishdavid" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-
       <a href="https://github.com/dharishdavid" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#333"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
         GitHub
       </a>
-
     </div>
     <p class="copy">&copy; 2026 Dharish David</p>
   </div>
