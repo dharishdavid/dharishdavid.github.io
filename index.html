@@ -65,9 +65,6 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .conf-item b { color: #1a1a2e; }
 .conf-item em { font-style: italic; }
 
-.placeholder { opacity: 0.6; position: relative; }
-.placeholder::after { content: 'Coming soon'; position: absolute; top: 16px; right: 16px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #998e7a; background: #f5f0e6; padding: 3px 10px; border-radius: 20px; }
-
 /* Teaching grid */
 .teaching-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 .teaching-card { background: #fff; border-radius: 16px; padding: 20px 24px; border: 1px solid #edeae2; }
@@ -76,9 +73,6 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .teaching-card ul { list-style: none; padding: 0; }
 .teaching-card li { font-size: 12px; color: #555; padding: 2px 0; padding-left: 14px; position: relative; }
 .teaching-card li::before { content: '—'; position: absolute; left: 0; color: #d4c9a8; }
-
-.projects-placeholder { text-align: center; padding: 60px 20px; background: #fff; border-radius: 16px; border: 1px solid #edeae2; }
-.projects-placeholder p { font-size: 14px; color: #888; }
 
 footer { border-top: 1px solid #e8e0d0; padding: 32px 0; text-align: center; }
 footer .social { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -118,7 +112,7 @@ footer .copy { font-size: 12px; color: #aaa; }
       <div class="about-card">
         <p>Project Manager, Research Manager, and Director with 15+ years spanning <strong>private sector consulting</strong>, <strong>policy research</strong>, <strong>academia</strong>, and <strong>AI-driven transformation</strong> — delivering multi-country market intelligence, partnership strategy, and go-to-market execution for governments, MNCs, and SMEs across Asia, Africa, and the Middle East. Combines team leadership (managed 25-person analyst teams), doctoral-level research expertise (PhD, Waseda University), and operational skills in building systems, strategic partnerships, and AI workflows.</p>
         <p>Managed 25-person analyst teams producing 100+ industry reports annually for institutional investors. Built operational infrastructure including cost-management systems, SOP libraries, and research networks across 20+ countries. Developed company-wide AI integration strategies using LLMs, agentic AI, and prompt engineering. Sourced strategic partnerships across India, KSA, and Mauritius enabling geographic expansion.</p>
-        <p>Eight years as Associate Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> teaching political economy, research methodology, and democracy and democratisation. PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Policy research at <strong>ADBI</strong> (Low Carbon Green Growth in Asia), <strong>UN Global Compact</strong> (sustainable finance strategy), and <strong>ERIA</strong> (private financing for low-carbon energy transition). Contributor to <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
+        <p>Eight years as Associate Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> — teaching ~100 students annually across Bachelor's and Master's programmes affiliated with <strong>University of London</strong> and <strong>UCL</strong>, managing academic performance evaluation and curriculum delivery. PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Policy research at <strong>ADBI</strong> (Low Carbon Green Growth in Asia), <strong>UN Global Compact</strong> (sustainable finance strategy), and <strong>ERIA</strong> (private financing for low-carbon energy transition). Contributor to ADBI working papers and book chapters, ERIA discussion papers, CAREC Institute studies, <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
       </div>
     </div>
 
@@ -243,6 +237,7 @@ footer .copy { font-size: 12px; color: #aaa; }
           <h4>Associate Faculty</h4>
           <div class="inst">SUSS &amp; SIM-Global Education, Singapore &mdash; 2013–2021</div>
           <ul>
+            <li>Taught ~100 students annually across Bachelor's and Master's programmes</li>
             <li>Political Economy of Global Business — SIM-GE / University of London</li>
             <li>Democracy and Democratisation — SIM-GE / University of London</li>
             <li>Strategic Financial Planning (Basic Research Methodology) — SIM-GE / UCL</li>
@@ -368,15 +363,33 @@ footer .copy { font-size: 12px; color: #aaa; }
         </div>
       </div>
 
-      <div class="placeholder" style="background:#fff;border-radius:16px;border:1px solid #edeae2;opacity:0.6;position:relative;">
-        <div style="padding:28px;text-align:center;">
-          <div style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:#e8ecf0;color:#475569;font-size:18px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <div style="margin-bottom:16px;">
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:24px 28px 12px;display:flex;align-items:center;gap:12px;">
+            <div class="card-icon slate" style="background:#e8ecf0;color:#475569;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 style="margin:0;font-size:16px;font-weight:600;">Projects</h3>
           </div>
-          <h3 style="font-size:16px;font-weight:600;color:#1a1a2e;margin-bottom:8px;">Projects</h3>
-          <p style="font-size:13px;color:#555;max-width:500px;margin:0 auto;">67 multi-country engagements spanning market intelligence, feasibility studies, regulatory analysis, and partnership strategy across 45 countries. Detail and case studies being developed.</p>
+          <div class="scroll-card" style="padding:0 28px 24px;">
+            <div class="pub-item"><b>ASEAN Blue Carbon and Finance Profiling</b> (2025). Sponsor: ASEAN Secretariat / Development Partners. Role: National Expert — Singapore Country Profile. Deliverable: Blue finance profiles and country presentation. Status: Completed. <em>Connected: Regional Workshop Jakarta Nov 2025.</em></div>
+            <div class="pub-item"><b>Renewable Energy Cooperation Between Central and South Asia</b> (2025–2026). Sponsor: CAREC Institute / ADB. Role: Author and Presenter. Deliverable: Research paper, policy workshop, blog article. Status: Completed — published 2026. <em>Connected: CAREC Institute Publication.</em></div>
+            <div class="pub-item"><b>Carbon Pricing and Competitiveness: Singapore Country Report</b> (2024–2025). Sponsor: ERIA. Role: Country Expert. Deliverable: Country report on carbon pricing mechanisms. Status: Completed — accepted for publication. <em>Connected: ERIA Carbon Tax Conference, Jakarta.</em></div>
+            <div class="pub-item"><b>UNDP Energizing Green Investments in the Pacific</b> (2024). Sponsor: UNDP Bangkok Regional Hub. Role: Panelist/Expert. Deliverable: Knowledge-sharing on PPPs for renewable energy in ASEAN and the Pacific. Status: Completed. <em>Connected: South-South Cooperation Knowledge Series.</em></div>
+            <div class="pub-item"><b>Sustainable Agriculture and Food Systems in ASEAN — Singapore Report</b> (2023). Sponsor: ERIA. Role: Country Report Author. Deliverable: Singapore country profile on sustainable agriculture, digital farming, and circular agriculture. Status: Completed. <em>Connected: ERIA Research Project Publication.</em></div>
+            <div class="pub-item"><b>Green Fintech across 5 APEC Economies</b> (2023). Sponsor: GoImpact / CUHK Business School / Ant Group. Role: Lead Author. Deliverable: Joint white paper on green fintech, digital finance, and sustainable investment. Status: Completed. <em>Connected: GoImpact White Paper.</em></div>
+            <div class="pub-item"><b>Post-Pandemic Green Recovery in ASEAN</b> (2023). Sponsor: ADBI / Routledge. Role: Co-author. Deliverable: Book chapter on green stimulus and job creation in post-COVID ASEAN. Status: Completed — published. <em>Connected: Routledge Book Chapter.</em></div>
+            <div class="pub-item"><b>Building Responsible and Resilient Supply Chains in ASEAN</b> (2021–2022). Sponsor: UN Global Compact Network Singapore / Accenture. Role: Lead Author. Deliverable: Flagship research publication. Status: Completed. <em>Connected: GCNS-Accenture Joint Publication.</em></div>
+            <div class="pub-item"><b>Green Finance and Sustainable Finance across ASEAN</b> (2021). Sponsor: UN Global Compact Network Singapore. Role: Manager and Lead Researcher. Deliverable: Research publication on green financing trends. Status: Completed. <em>Connected: GCNS Research Publication.</em></div>
+            <div class="pub-item"><b>Sustainable Finance Strategy for Singapore</b> (2021). Sponsor: UN Global Compact Network Singapore. Role: Strategy Lead. Deliverable: Inaugural sustainable finance and social sustainability strategy. Status: Completed.</div>
+            <div class="pub-item"><b>ADBI-KODIT: Startup Environment and Funding Activity in India</b> (2020). Sponsor: ADBI / Korea Technology Finance Corporation. Role: Co-author. Deliverable: ADBI Working Paper 1145. Status: Completed — published. <em>Connected: ADBI Working Paper.</em></div>
+            <div class="pub-item"><b>Private Financing for Low-Carbon Energy Transition in ASEAN</b> (2018–2020). Sponsor: ERIA. Role: Survey Designer and Co-author. Deliverable: Multi-country survey, ERIA Discussion Paper DP-2019-27. Status: Completed. <em>Connected: ERIA Discussion Paper.</em></div>
+            <div class="pub-item"><b>Realizing Smart Cities in Asia — Singapore Case Study</b> (2019–2021). Sponsor: ERIA. Role: Country Researcher and Author. Deliverable: Singapore Smart Nation reports (V1–V4), workshop presentations. Status: Completed. <em>Connected: ERIA Smart Cities Project.</em></div>
+            <div class="pub-item"><b>Handbook of Green Finance — PPPs and Green Investment Banks</b> (2019). Sponsor: ADBI / Springer. Role: Co-author. Deliverable: Book chapter on PPPs and green investment banks. Status: Completed — published. <em>Connected: Springer Handbook.</em></div>
+            <div class="pub-item"><b>Low Carbon Green Growth in Asia (LCGA)</b> (2010–2012). Sponsor: ADBI. Role: Research Associate and Key Contributor. Deliverable: Flagship ADBI studies on climate change, green Asia, and sustainable infrastructure. Status: Completed. <em>Connected: ADBI Flagship Publications.</em></div>
+            <div class="pub-item"><b>Financial Innovations for Migrant Workers in the MENA Region</b> (2022). Sponsor: ADBI / Routledge. Role: Co-author. Deliverable: Book chapter on fintech solutions for migrant workers. Status: Completed — published. <em>Connected: Routledge Book Chapter.</em></div>
+          </div>
         </div>
-        <div style="position:absolute;top:16px;right:16px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#998e7a;background:#f5f0e6;padding:3px 10px;border-radius:20px;">Coming soon</div>
       </div>
 
     </div>
