@@ -9,9 +9,8 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; color: #1a1a2e; line-height: 1.6; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
-/* Hero */
 .hero { background: linear-gradient(135deg, #fdf5e6 0%, #f5e6c8 50%, #ede0b8 100%); padding: 60px 0 48px; text-align: center; position: relative; }
 .hero::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #d4c9a8, transparent); }
 .hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 16px; }
@@ -20,69 +19,67 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .hero .tagline { font-size: 15px; color: rgba(26,26,46,0.7); margin: 6px 0 4px; font-weight: 400; }
 .hero .locality { font-size: 14px; color: rgba(26,26,46,0.45); }
 
-/* Content */
 .content { padding: 48px 0; }
 .section { margin-bottom: 40px; }
 .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 20px; }
 
-/* About */
 .about-card { background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; }
-.about-card p { font-size: 15px; color: #444; margin-bottom: 14px; }
+.about-card p { font-size: 15px; color: #444; margin-bottom: 14px; text-align: justify; }
 .about-card p:last-child { margin-bottom: 0; }
 
-/* Cards */
 .card-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
-.card-grid-3 { display: grid; gap: 16px; grid-template-columns: 1fr 1fr 1fr; }
-.card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; transition: all 0.25s; display: block; }
+.card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; transition: all 0.25s; }
 .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); transform: translateY(-2px); border-color: #d4c9a8; }
-a.card { text-decoration: none; color: inherit; }
 .card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 18px; flex-shrink: 0; }
 .card h3 { font-size: 16px; font-weight: 600; color: #1a1a2e; margin-bottom: 10px; }
 .card p, .card li { font-size: 13px; color: #555; line-height: 1.6; }
 .card ul { list-style: none; padding: 0; }
-.card li { padding: 3px 0; padding-left: 14px; position: relative; }
-.card li::before { content: '—'; position: absolute; left: 0; color: #d4c9a8; }
+.card ul li { padding: 3px 0; padding-left: 14px; position: relative; }
+.card ul li::before { content: '—'; position: absolute; left: 0; color: #d4c9a8; }
 
 .card-icon.blue { background: #e8edf5; color: #1a73e8; }
 .card-icon.green { background: #e6f0ea; color: #2e7d5e; }
 .card-icon.amber { background: #f5efe0; color: #b8860b; }
 .card-icon.rose { background: #f5e8ea; color: #b34a5c; }
-.card-icon.indigo { background: #e8e8f5; color: #4a4ab3; }
-.card-icon.teal { background: #e0f0f0; color: #0d7373; }
-.card-icon.slate { background: #e8ecf0; color: #475569; }
 
-/* Milestones */
 .milestones { display: grid; gap: 12px; }
 .milestone { display: flex; gap: 16px; background: #fff; border-radius: 16px; padding: 24px 28px; border: 1px solid #edeae2; transition: all 0.25s; }
 .milestone:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #d4c9a8; }
 .milestone-year { font-size: 13px; font-weight: 700; color: #d4c9a8; white-space: nowrap; min-width: 80px; padding-top: 2px; }
 .milestone-content h3 { font-size: 15px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
 .milestone-content p { font-size: 13px; color: #555; line-height: 1.55; }
+.milestone-content .sub { font-size: 12px; color: #888; margin-top: 2px; }
 
-/* Publication items in card */
-.pub-list-compact { list-style: none; padding: 0; }
-.pub-list-compact li { font-size: 12px; color: #555; padding: 5px 0; line-height: 1.5; border-top: 1px solid #f0ece4; }
-.pub-list-compact li:first-child { border-top: none; }
-.pub-list-compact li em { font-style: italic; }
-.pub-list-compact li a { color: #1a73e8; text-decoration: none; font-weight: 500; }
-.pub-list-compact li a:hover { text-decoration: underline; }
+.scroll-card { max-height: 480px; overflow-y: auto; padding-right: 4px; }
+.scroll-card::-webkit-scrollbar { width: 4px; }
+.scroll-card::-webkit-scrollbar-thumb { background: #d4c9a8; border-radius: 4px; }
 
-/* Conference items in card */
-.conf-list-compact { list-style: none; padding: 0; }
-.conf-list-compact li { font-size: 12px; color: #555; padding: 4px 0; line-height: 1.5; border-top: 1px solid #f0ece4; }
-.conf-list-compact li:first-child { border-top: none; }
-.conf-list-compact li b { color: #1a1a2e; }
+.pub-item { font-size: 12px; color: #555; padding: 5px 0; line-height: 1.5; border-top: 1px solid #f0ece4; text-indent: -22px; padding-left: 22px; }
+.pub-item:first-child { border-top: none; }
+.pub-item em { font-style: italic; }
+.pub-item a { color: #1a73e8; text-decoration: none; font-weight: 500; }
+.pub-item a:hover { text-decoration: underline; }
 
-/* Placeholder */
+.conf-item { font-size: 12px; color: #555; padding: 4px 0; line-height: 1.5; border-top: 1px solid #f0ece4; }
+.conf-item:first-child { border-top: none; }
+.conf-item b { color: #1a1a2e; }
+.conf-item em { font-style: italic; }
+
 .placeholder { opacity: 0.6; position: relative; }
 .placeholder::after { content: 'Coming soon'; position: absolute; top: 16px; right: 16px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #998e7a; background: #f5f0e6; padding: 3px 10px; border-radius: 20px; }
 
-/* CV links row */
-.cv-row { display: flex; gap: 12px; margin-top: 16px; }
-.cv-row a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: #fff; border: 1px solid #edeae2; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 500; color: #1a1a2e; transition: all 0.2s; }
-.cv-row a:hover { border-color: #d4c9a8; background: #faf8f5; }
+/* Teaching grid */
+.teaching-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.teaching-card { background: #fff; border-radius: 16px; padding: 20px 24px; border: 1px solid #edeae2; }
+.teaching-card h4 { font-size: 13px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+.teaching-card .inst { font-size: 12px; color: #998e7a; margin-bottom: 6px; font-weight: 500; }
+.teaching-card ul { list-style: none; padding: 0; }
+.teaching-card li { font-size: 12px; color: #555; padding: 2px 0; padding-left: 14px; position: relative; }
+.teaching-card li::before { content: '—'; position: absolute; left: 0; color: #d4c9a8; }
 
-/* Footer */
+.projects-placeholder { text-align: center; padding: 60px 20px; background: #fff; border-radius: 16px; border: 1px solid #edeae2; }
+.projects-placeholder p { font-size: 14px; color: #888; }
+
 footer { border-top: 1px solid #e8e0d0; padding: 32px 0; text-align: center; }
 footer .social { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
 footer .social a { display: inline-flex; align-items: center; gap: 6px; color: #666; text-decoration: none; font-size: 13px; padding: 8px 14px; border-radius: 8px; transition: all 0.2s; }
@@ -94,11 +91,10 @@ footer .copy { font-size: 12px; color: #aaa; }
   .hero { padding: 40px 0 32px; }
   .hero h1 { font-size: 28px; }
   .hero .suffix { font-size: 22px; }
-  .card-grid, .card-grid-3 { grid-template-columns: 1fr; }
+  .card-grid, .teaching-grid { grid-template-columns: 1fr; }
   .milestone { flex-direction: column; gap: 6px; }
   .milestone-year { min-width: auto; }
   .about-card { padding: 24px; }
-  .cv-row { flex-direction: column; }
 }
 </style>
 </head>
@@ -120,8 +116,9 @@ footer .copy { font-size: 12px; color: #aaa; }
     <div class="section">
       <div class="section-title">About</div>
       <div class="about-card">
-        <p>Associate Director, Project Manager, and Research Manager with 15+ years operating at the intersection of <strong>private sector consulting</strong>, <strong>policy research</strong>, <strong>academia</strong>, and <strong>AI-driven transformation</strong>. Leads multi-country engagements for governments, MNCs, and SMEs — delivering market intelligence, partnership strategy, and go-to-market execution across Asia, Africa, and the Middle East.</p>
-        <p>PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Former Director of a 25-person analyst team at Uzabase/SPEEDA. Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> (8 years teaching political economy and research methodology). Policy researcher at <strong>ADBI</strong> (flagship studies on low-carbon green growth), <strong>UN Global Compact</strong> (sustainable finance strategy), and <strong>ERIA</strong> (private financing for low-carbon energy transition). Regular contributor to <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
+        <p>Director of Research and Analytics, Project Manager, and Academic with 15+ years operating at the intersection of <strong>private sector consulting</strong>, <strong>policy research</strong>, <strong>academia</strong>, and <strong>AI-driven transformation</strong>. Has delivered <strong>$1M+ in client revenue</strong> across <strong>67 projects in 45 countries</strong> for 41 clients — spanning market sizing, competitive intelligence, partnership feasibility, and go-to-market strategy for governments, MNCs, and SMEs across Asia, Africa, and the Middle East.</p>
+        <p>Built operational infrastructure from scratch: cost-management and profitability tracking systems, end-to-end SOP library, <strong>100+ local researcher network across 20+ countries</strong> reducing costs 20–30%, and strategic partnerships across India, KSA, and Mauritius. Developed company-wide <strong>AI integration strategy</strong> mapping 50+ functions by displacement risk using agentic AI workflows, LLMs, and prompt engineering; designed <strong>Data-as-a-Service (DaaS)</strong> 3-tier framework creating a new revenue stream. Previously managed a 25-person analyst team producing 100+ industry reports for institutional investors.</p>
+        <p>Eight years as Associate Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> teaching political economy, research methodology, and democracy and democratisation. PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Policy research at <strong>ADBI</strong> (Low Carbon Green Growth in Asia), <strong>UN Global Compact</strong> (sustainable finance strategy), and <strong>ERIA</strong> (private financing for low-carbon energy transition). Contributor to <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
       </div>
     </div>
 
@@ -134,12 +131,13 @@ footer .copy { font-size: 12px; color: #aaa; }
           <div class="card-icon blue">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/></svg>
           </div>
-          <h3>Market &amp; Industry Research</h3>
+          <h3>Research Strategy &amp; Partnerships</h3>
           <ul>
-            <li>Multi-sector research across 16 verticals (SIC/HS code)</li>
-            <li>Market sizing &mdash; TAM-SAM-SOM, RAS/IPF sampling</li>
-            <li>Competitive intelligence, regulatory analysis, due diligence</li>
-            <li>Primary research: KOL interviews, focus groups, field surveys</li>
+            <li>Policy &amp; regulatory analysis, competitive intelligence, due diligence</li>
+            <li>M&amp;A partner search &amp; alliance management</li>
+            <li>Stakeholder engagement, grant &amp; proposal development</li>
+            <li>Industry research for investment, geographic expansion strategy</li>
+            <li>Business development &amp; strategic partnerships</li>
           </ul>
         </div>
 
@@ -147,12 +145,13 @@ footer .copy { font-size: 12px; color: #aaa; }
           <div class="card-icon green">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
-          <h3>Strategy &amp; Partnerships</h3>
+          <h3>Sustainability, Policy &amp; Development</h3>
           <ul>
-            <li>Go-to-market strategy and business development</li>
-            <li>Strategic partnerships &amp; M&amp;A partner search</li>
-            <li>Geographic expansion: MENA, sub-Saharan Africa, SE Asia</li>
-            <li>Stakeholder engagement: government, MNC, multilateral</li>
+            <li>Sustainable development &amp; ESG disclosure (TCFD, GRI, ISSB)</li>
+            <li>EU CSRD &amp; SFDR, UN PRI &amp; SDG alignment</li>
+            <li>Impact measurement, materiality assessment, green bonds</li>
+            <li>Infrastructure finance, PPPs, blended finance</li>
+            <li>Political economy analysis, geopolitical risk</li>
           </ul>
         </div>
 
@@ -163,7 +162,8 @@ footer .copy { font-size: 12px; color: #aaa; }
           <h3>AI &amp; Digital Transformation</h3>
           <ul>
             <li>AI integration strategy: displacement matrix for 50+ functions</li>
-            <li>Human-in-the-loop workflows (Perplexity, ChatGPT, Gemini)</li>
+            <li>Agentic AI workflows, LLMs, prompt engineering</li>
+            <li>Human-in-the-loop workflows, AI displacement risk mapping</li>
             <li>Data-as-a-Service (DaaS) 3-tier framework</li>
             <li>AppSheet no-code automation, SOP library design</li>
           </ul>
@@ -173,19 +173,20 @@ footer .copy { font-size: 12px; color: #aaa; }
           <div class="card-icon rose">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6V2M8 10V6M16 10V6M12 14v4M8 18v-2M16 18v-2"/><rect x="2" y="10" width="20" height="12" rx="2"/></svg>
           </div>
-          <h3>Operations &amp; Infrastructure</h3>
+          <h3>Leadership &amp; Programme Management</h3>
           <ul>
-            <li>100+ researcher network across 20+ countries</li>
-            <li>Cost-management &amp; real-time profitability tracking</li>
-            <li>Freelancer platform strategy (Stoke/Fiverr/Upwork)</li>
-            <li>Training academy, SOPs, QA checkpoints, 360 feedback</li>
+            <li>Multi-country project &amp; programme management</li>
+            <li>Lead 25-member analyst team, freelancer network management</li>
+            <li>Cost &amp; profitability management, resource budgeting</li>
+            <li>Process improvement, SOPs, training &amp; capacity building</li>
+            <li>Cross-cultural leadership, KPI &amp; performance management</li>
           </ul>
         </div>
 
       </div>
     </div>
 
-    <!-- Career Milestones (reverse chronological) -->
+    <!-- Career Milestones -->
     <div class="section">
       <div class="section-title">Career Milestones</div>
       <div class="milestones">
@@ -233,55 +234,151 @@ footer .copy { font-size: 12px; color: #aaa; }
       </div>
     </div>
 
-    <!-- Portfolio -->
+    <!-- Teaching -->
     <div class="section">
-      <div class="section-title">Portfolio</div>
-      <div class="card-grid-3">
+      <div class="section-title">Teaching Experience</div>
+      <div class="teaching-grid">
 
-        <a class="card" href="detailed-cv.html#publications">
-          <div class="card-icon indigo">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
-          </div>
-          <h3>Publications</h3>
-          <ul class="pub-list-compact">
-            <li>David Dharish (2026). Geoeconomics of renewable energy in South and Central Asia using PPPs. <em>CAREC Institute.</em> <a href="https://www.carecinstitute.org/publications/carec-institute-releases-report-on-renewable-energy-cooperation-in-south-and-central-asia/" target="_blank">Link</a></li>
-            <li>David, D., Rajeshwari, B., &amp; S., T. (2025). Algorithmic Bias and Discrimination in India. <em>Journal of Development Policy and Practice.</em> <a href="https://doi.org/10.1177/24551333251343358" target="_blank">Link</a></li>
-            <li>David Dharish and Abhishek Pandey (2025). <em>China's Assertive Posturing in the Indo-Pacific &amp; Prospects for Indo-ASEAN Collaboration.</em> KW Publishers. <a href="http://kwpub.in/Home/product/9788198096302/china-s-assertive-posturing-in-the-indo-pacific-@-prospects-for-indo-asean-collaboration" target="_blank">Link</a></li>
-            <li>GoImpact, CUHK Business School, and Ant Group (2023). <em>The Intersection of Green, Fin, and Tech: A Study across 5 APEC Economies.</em> (Lead author). <a href="https://www.researchgate.net/publication/375878677_The_Intersection_of_Green_Fin_and_Tech_A_Study_across_5_APEC_Economies_GoImpact_CUHK_Business_School_2023" target="_blank">Link</a></li>
-            <li>GCNS and Accenture (2022). <em>Building Responsible and Resilient Supply Chains in ASEAN.</em> (Lead author). <a href="https://www.researchgate.net/publication/369801110_Building_Responsible_And_Resilient_Supply_Chains_In_ASEAN" target="_blank">Link</a></li>
-            <li style="border:none;padding-top:8px;"><a href="detailed-cv.html#publications" style="font-size:12px;font-weight:600;color:#1a73e8;text-decoration:none;">View all publications &rarr;</a></li>
+        <div class="teaching-card">
+          <h4>Associate Faculty</h4>
+          <div class="inst">SUSS &amp; SIM-Global Education, Singapore &mdash; 2013–2021</div>
+          <ul>
+            <li>Political Economy of Global Business — SIM-GE / University of London</li>
+            <li>Democracy and Democratisation — SIM-GE / University of London</li>
+            <li>Strategic Financial Planning (Basic Research Methodology) — SIM-GE / UCL</li>
+            <li>Asian Political Economy and International Society</li>
           </ul>
-        </a>
+        </div>
 
-        <a class="card" href="detailed-cv.html#conferences">
-          <div class="card-icon teal">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h3>Conferences &amp; Workshops</h3>
-          <ul class="conf-list-compact">
-            <li><b>2025</b> — EMIS Transforming Data Analysis &amp; Insights Event. Speaker/Panelist: AI and market research in Asia. Singapore.</li>
-            <li><b>2025</b> — 9th CAREC Think Tank Development Forum. "Renewable Energy Cooperation Between Central and South Asia." Urumqi, China.</li>
-            <li><b>2025</b> — CAREC Institute Policy Workshop: Advancing the Green Transition in CAREC. Speaker. Online.</li>
-            <li><b>2024</b> — UNDP South-South Cooperation Knowledge Series: Energizing Green Investment in the Pacific. Panelist. Online.</li>
-            <li><b>2024</b> — ERIA Carbon Tax Conference. Country Expert: Carbon Pricing in Singapore. Jakarta.</li>
-            <li><b>2024</b> — 6th Digital Citizenship Summit. "Algorithmic Bias and Discrimination in India." Hyderabad.</li>
-            <li style="border:none;padding-top:8px;"><a href="detailed-cv.html#conferences" style="font-size:12px;font-weight:600;color:#1a73e8;text-decoration:none;">View all conferences &rarr;</a></li>
+        <div class="teaching-card">
+          <h4>Student Mentorship &amp; Co-Curricular</h4>
+          <div class="inst">SIM International Affairs Society &mdash; 2013–2021</div>
+          <ul>
+            <li>Advisor to SIM's International Affairs Society</li>
+            <li>Coached and prepared students for Harvard National Model United Nations (HNMUN), Boston</li>
+            <li>Guided Master's students in research proposal writing and evidence-based policy analysis</li>
           </ul>
-        </a>
+        </div>
 
-        <div class="card placeholder">
-          <div class="card-icon slate">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h3>Projects</h3>
-          <p>67 multi-country engagements spanning market intelligence, feasibility studies, regulatory analysis, and partnership strategy across 45 countries. Detail and case studies being developed.</p>
+        <div class="teaching-card">
+          <h4>Teaching Associate</h4>
+          <div class="inst">Waseda University, Tokyo &mdash; 2006–2009</div>
+          <ul>
+            <li>Economy and Business — School of International Liberal Studies</li>
+            <li>Principles of ODA — School of International Liberal Studies</li>
+            <li>Curriculum design, coursework evaluation, student mentoring, and thesis supervision</li>
+          </ul>
+        </div>
+
+        <div class="teaching-card">
+          <h4>Capacity Building &amp; Training</h4>
+          <div class="inst">Corporate &amp; Professional &mdash; 2021–Present</div>
+          <ul>
+            <li>Designed 2-week intensive research training curriculum at Global Angle</li>
+            <li>Co-developed NTU Sustainable Finance short course (100+ professionals)</li>
+            <li>SOP-based training, QA checkpoints, and 360-degree feedback systems</li>
+          </ul>
         </div>
 
       </div>
-      <div class="cv-row">
-        <a href="short-cv.html">Short CV &rarr;</a>
-        <a href="detailed-cv.html">Detailed CV &rarr;</a>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="section">
+      <div class="section-title">Portfolio</div>
+
+      <div style="margin-bottom:16px;">
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:24px 28px 12px;display:flex;align-items:center;gap:12px;">
+            <div class="card-icon indigo" style="background:#e8e8f5;color:#4a4ab3;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
+            </div>
+            <h3 style="margin:0;font-size:16px;font-weight:600;">Publications</h3>
+          </div>
+          <div class="scroll-card" style="padding:0 28px 24px;">
+            <div class="pub-item">David, Dharish (2026). Geoeconomics of renewable energy development in South and Central Asia using public–private partnerships: Scope for interregional energy cooperation. <em>CAREC Institute.</em> <a href="https://www.carecinstitute.org/publications/carec-institute-releases-report-on-renewable-energy-cooperation-in-south-and-central-asia/" target="_blank">Link</a></div>
+            <div class="pub-item">David, Dharish (2026). Two Regions, One Opportunity: The Geoeconomics of Renewable Energy Trade Between Central and South Asia. <em>CAREC Institute Blog.</em> <a href="https://www.carecinstitute.org/two-regions-one-opportunity-the-geoeconomics-of-renewable-energy-trade-between-central-and-south-asia/" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish, Yamada Kentaro and Siti Mustaqimatud Diyanah (2025). Singapore Country Report. In Kozono et al., <em>Preliminary Scoping Study on Building and Enhancing Sustainable Agriculture and Food Systems in ASEAN Countries.</em> ERIA. <a href="https://www.eria.org/publications/preliminary-scoping-study-on-building-and-enhancing-sustainable-agriculture-and-food-systems-in-asean-countries" target="_blank">Link</a></div>
+            <div class="pub-item">David, D., Rajeshwari, B., &amp; S., T. (2025). Algorithmic Bias and Discrimination in India: A Looming Crisis. <em>Journal of Development Policy and Practice.</em> <a href="https://doi.org/10.1177/24551333251343358" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish (2025). Singapore Country Report. <em>ERIA Study on Carbon Markets, Taxation, Revenue Recycling, Regional Competitiveness.</em> ERIA. <a href="https://www.eria.org/news-and-views/eria-study-on-carbon-markets-taxation-revenue-recycling-regional-competitiveness" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Abhishek Pandey (2025). <em>China's Assertive Posturing in the Indo-Pacific &amp; Prospects for Indo-ASEAN Collaboration.</em> KW Publishers. <a href="http://kwpub.in/Home/product/9788198096302/china-s-assertive-posturing-in-the-indo-pacific-@-prospects-for-indo-asean-collaboration" target="_blank">Link</a></div>
+            <div class="pub-item">David, D., &amp; S., T. (2024). Belt and Road's Democratic Dilemma: Sovereignty and Citizenship Challenges for Malaysia and Thailand. <em>Global Policy Journal,</em> Durham University. <a href="https://www.globalpolicyjournal.com/blog/23/10/2024/belt-and-roads-democratic-dilemma" target="_blank">Link</a></div>
+            <div class="pub-item">GoImpact, CUHK Business School, and Ant Group (2023). <em>The Intersection of Green, Fin, and Tech: A Study across 5 APEC Economies.</em> (Lead author). Joint White Paper. <a href="https://www.researchgate.net/publication/375878677_The_Intersection_of_Green_Fin_and_Tech_A_Study_across_5_APEC_Economies_GoImpact_CUHK_Business_School_2023" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Sanjana Bernadette Williams (2023). ASEAN's Green Recovery and the Role of Green Stimulus in Job Creation in a Post-COVID World. In <em>Post-Pandemic Green Recovery in ASEAN.</em> Routledge (ADBI Book Chapter). <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003324386-9/asean-green-recovery-role-green-stimulus-job-creation-post-covid-world-dharish-david-sanjana-bernadette-williams" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Sanjana Bernadette Williams (2022). Financial Innovations and Fintech Solutions for Migrant Workers in the MENA Region. In <em>Innovative Finance for Technological Progress.</em> Routledge (ADBI Book Chapter). <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003220220-16/financial-innovations-fintech-solutions-migrant-workers-mena-region-dharish-david-sanjana-bernadette-williams" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and B. Rajeshwari (2022). India's Data Protection Dilemma. <em>East Asia Forum,</em> Australian National University. <a href="https://eastasiaforum.org/2022/11/16/indias-data-protection-dilemma/" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Causevic Amar (2022). PPPs in ASEAN and CAREC and the Scope for PPPs in Renewable Energy Projects. In <em>Unlocking Private Investment in Sustainable Infrastructure in Asia.</em> Routledge (ADBI Book Chapter). <a href="https://www.taylorfrancis.com/chapters/oa-edit/10.4324/9781003228790-14/private-public-partnerships-association-southeast-asian-nations-carec-scope-renewable-energy-projects-dharish-david-amar-causevic" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Louis Martin-Vezian (2022). Is Democracy the Political Ideology that Will Divide the World Next? <em>Global Policy Journal,</em> Durham University. <a href="https://www.globalpolicyjournal.com/blog/11/08/2022/democracy-political-ideology-will-divide-world-next" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish, Miyana Yoshino, and Joseph Varun (2022). Developing FinTech Ecosystems for Voluntary Carbon Markets Through Nature-Based Solutions: Opportunities and Barriers in ASEAN. <em>Springer</em> (Chapter 7). <a href="https://link.springer.com/chapter/10.1007/978-981-19-2662-4_6" target="_blank">Link</a></div>
+            <div class="pub-item">GCNS and Accenture (2022). <em>Building Responsible and Resilient Supply Chains in ASEAN.</em> (Lead author). Joint Publication. <a href="https://www.researchgate.net/publication/369801110_Building_Responsible_And_Resilient_Supply_Chains_In_ASEAN" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Boulud Benjamin (2021). The Rise of Right-Wing Disinformation in Democracies While Regulations Lag. <em>Unravel.</em> <a href="https://unravel.ink/the-rise-of-right-wing-disinformation-in-democracies-while-regulations-lag/" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish (2021). The Transformation of India's Tech Startups. <em>East Asia Forum,</em> Australian National University. <a href="https://www.eastasiaforum.org/2021/05/24/the-transformation-of-indias-tech-startups/" target="_blank">Link</a></div>
+            <div class="pub-item">David, D., Gopalan, S., &amp; Ramachandran, S. (2020). The Startup Environment and Funding Activity in India. <em>ADBI Working Paper 1145.</em> <a href="https://www.adb.org/publications/startup-environment-and-funding-activity-india" target="_blank">Link</a></div>
+            <div class="pub-item">Causesvic et al. (including David Dharish) (2020). Financing Resilience Efforts to Confront Future Urban and Sea-Level Rise Flooding: Are Coastal Megacities in ASEAN Doing Enough? <em>Environment and Planning B: Urban Analytics and City Science.</em> <a href="https://journals.sagepub.com/doi/10.1177/2399808321994437" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Simran Walia (2020). What a China+1 Policy Might Look Like for Japan? <em>Global Policy Journal,</em> Durham University. <a href="https://www.globalpolicyjournal.com/blog/30/09/2020/what-china1-policy-might-look-japan" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Simran Walia (2020). Japan Looks to Diversify Supply Chains Out of China. <em>Unravel.</em> <a href="https://unravel.ink/japan-looks-to-diversify-supply-chains-out-of-china/" target="_blank">Link</a></div>
+            <div class="pub-item">Venkatachalam Anbumozhi, Matthew LoCastro, Dharish David, Dian Lutfiana, Tsani Fauziah Rakhmah (2020). Unlocking the Potential of Private Financing for Low-Carbon Energy Transition: Ideas and Solutions from ASEAN Markets. <em>ERIA Discussion Paper DP-2019-27.</em> <a href="https://www.eria.org/uploads/media/discussion-papers/Unlocking-the-Potentials-of-Private-Financing-for-Low-cabon-Energy-Transistion-Ideas-and-Solutions-from-ASEAN-Markets.pdf" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Matthew LoCastro (2020). For Asia, Low-Carbon Energy Is Both a Priority and One of the Greatest Regional Challenges. <em>South China Morning Post.</em> <a href="https://www.scmp.com/print/week-asia/opinion/article/3051911/asia-low-carbon-energy-both-priority-and-one-greatest-regional" target="_blank">Link</a></div>
+            <div class="pub-item">David D. and Venkatachalam A. (2019). A Comparative Study on the Role of Public–Private Partnerships and Green Investment Banks in Boosting Low-Carbon Investments. In Sachs et al. (eds.), <em>Handbook of Green Finance.</em> Springer. <a href="https://link.springer.com/referenceworkentry/10.1007/978-981-10-8710-3_25-1" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish and Jacob Chacko (2016). Three Pillars to Sustainable Growth and Development in India. <em>SPEEDA Insights,</em> Uzabase, Inc. <a href="http://www.slideshare.net/KynaTsai/three-pillars-to-sustainable-growth-and-development-in-india-pillar-i" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish (2016). Stalling Investments in Infrastructure and the Expanding Infra Debt Burden in India. <em>SPEEDA Insights,</em> Uzabase, Inc. <a href="http://www.slideshare.net/KynaTsai/stalling-investments-in-infrastructure-and-the-expanding-infra-debt-burden-in-india" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish (2014). The Japanese Experience with Highway Development. <em>Journal of Infrastructure Development,</em> Sage Publications, 6(1), 17–42. <a href="https://journals.sagepub.com/doi/abs/10.1177/0974930614543044" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish (2009). The Indian Experience with National Highway Financing. <em>Journal of the Graduate School of Asia-Pacific Studies,</em> Waseda University, No. 18, 231–256. <a href="https://www.researchgate.net/profile/Dharish-David/publication/44258438_The_Indian_Experience_with_National_Highway_Financing/links/0fcfd512e476391b9d000000/The-Indian-Experience-with-National-Highway-Financing.pdf" target="_blank">Link</a></div>
+            <div class="pub-item">David Dharish (forthcoming 2026). Artificial Intelligence, Public Policy, and Governance. <em>Book Chapter.</em></div>
+          </div>
+        </div>
       </div>
+
+      <div style="margin-bottom:16px;">
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:24px 28px 12px;display:flex;align-items:center;gap:12px;">
+            <div class="card-icon teal" style="background:#e0f0f0;color:#0d7373;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 style="margin:0;font-size:16px;font-weight:600;">Conferences &amp; Workshops</h3>
+          </div>
+          <div class="scroll-card" style="padding:0 28px 24px;">
+            <div class="conf-item"><b>2025</b> — <em>Regional Workshop on ASEAN Blue Carbon and Finance Profiling.</em> Country Profile Presenter. ASEAN Secretariat. Jakarta.</div>
+            <div class="conf-item"><b>2025</b> — <em>9th CAREC Think Tank Development Forum &amp; Tianshan Forum.</em> "Renewable Energy Cooperation Between Central and South Asia." Urumqi, China.</div>
+            <div class="conf-item"><b>2025</b> — <em>CAREC Institute Policy Workshop: Advancing the Green Transition in CAREC.</em> Speaker. Online.</div>
+            <div class="conf-item"><b>2025</b> — <em>EMIS Transforming Data Analysis &amp; Insights Event.</em> Speaker/Panelist: AI and market research in Asia. Singapore.</div>
+            <div class="conf-item"><b>2025</b> — <em>C3S-CEAS Conference: A Decade of Act East Policy.</em> "China and India's Trade and Investment in Southeast Asia." Bangalore.</div>
+            <div class="conf-item"><b>2024</b> — <em>6th Digital Citizenship Summit.</em> "Algorithmic Bias and Discrimination in India." Hyderabad.</div>
+            <div class="conf-item"><b>2024</b> — <em>CEAS Distinguished Lecture Series.</em> "Comparative Analysis of Indian and Chinese Economic Engagement in ASEAN." Bangalore.</div>
+            <div class="conf-item"><b>2024</b> — <em>ERIA Carbon Tax Conference.</em> Country Expert: Carbon Pricing in Singapore. Jakarta.</div>
+            <div class="conf-item"><b>2024</b> — <em>2nd All India Conference of East Asian Studies.</em> Presenter. Bangalore.</div>
+            <div class="conf-item"><b>2024</b> — <em>UNDP South-South Cooperation Knowledge Series: Energizing Green Investment in the Pacific.</em> Panelist. Online.</div>
+            <div class="conf-item"><b>2023</b> — <em>C3S-CEAS Conference: ASEAN Centrality in the Indo-Pacific.</em> Co-presenter. Bangalore.</div>
+            <div class="conf-item"><b>2023</b> — <em>ERIA Workshop: Sustainable Agriculture and Food Systems in ASEAN.</em> Singapore Country Report presenter. Jakarta.</div>
+            <div class="conf-item"><b>2021</b> — <em>ACCA Singapore Virtual Conference.</em> Moderator/Panelist on sustainable finance. Online.</div>
+            <div class="conf-item"><b>2020</b> — <em>ICPIS 2020: Malaysia in a De-Globalising World.</em> "Reconsidering the Compatibility of Islam and Democracy." Online.</div>
+            <div class="conf-item"><b>2020</b> — <em>SISGIS Conference: Traditional and Non-Traditional Security Challenges amid Covid-19.</em> Paper presenter. Online.</div>
+            <div class="conf-item"><b>2020</b> — <em>ADBI-CAREC Virtual Policy Workshop: Unlocking Private Investment in Sustainable Infrastructure in Asia.</em> Presenter &amp; Discussant. Online.</div>
+            <div class="conf-item"><b>2020</b> — <em>GSPP International Online Conference on SDGs.</em> "Geoeconomics of Renewable Energy in South and Central Asia." Online.</div>
+            <div class="conf-item"><b>2020</b> — <em>ADBI-KODIT Conference on Investment in Startups and Small Business Financing.</em> Presenter &amp; Discussant. Tokyo.</div>
+            <div class="conf-item"><b>2020</b> — <em>ERIA Research Project Dissemination.</em> "Unlocking Private Financing for Low-Carbon Energy Transition." Jakarta.</div>
+            <div class="conf-item"><b>2020</b> — <em>Faculty Development Programme: COVID-19 and New International Order.</em> Resource Person. Online.</div>
+            <div class="conf-item"><b>2020</b> — Guest Lecture: "Globalization in a Post-Covid19 World: Implications for India." Banaras Hindu University. Varanasi.</div>
+            <div class="conf-item"><b>2020</b> — Guest Lecture: "Understanding the Global Trends in Democratization." Christ University. Bengaluru.</div>
+            <div class="conf-item"><b>2019</b> — <em>ERIA Internal Project Meeting: Green Finance Survey Findings.</em> Co-author and presenter. Jakarta.</div>
+            <div class="conf-item"><b>2019</b> — <em>ERIA Workshop: Realizing Smart Cities.</em> "Navigating the Smart City Formulation — Singapore's Experience." Chiangmai, Thailand.</div>
+            <div class="conf-item"><b>2019</b> — <em>ISA Asia-Pacific Regional Conference: Asia-Pacific at a Crossroads.</em> Chair &amp; Discussant. NTU Singapore.</div>
+            <div class="conf-item"><b>2018</b> — <em>International Conference on Well-Being (ICWB2018).</em> Poster presenter. SUSS. Singapore.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder" style="background:#fff;border-radius:16px;border:1px solid #edeae2;opacity:0.6;position:relative;">
+        <div style="padding:28px;text-align:center;">
+          <div style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:#e8ecf0;color:#475569;font-size:18px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 style="font-size:16px;font-weight:600;color:#1a1a2e;margin-bottom:8px;">Projects</h3>
+          <p style="font-size:13px;color:#555;max-width:500px;margin:0 auto;">67 multi-country engagements spanning market intelligence, feasibility studies, regulatory analysis, and partnership strategy across 45 countries. Detail and case studies being developed.</p>
+        </div>
+        <div style="position:absolute;top:16px;right:16px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#998e7a;background:#f5f0e6;padding:3px 10px;border-radius:20px;">Coming soon</div>
+      </div>
+
     </div>
 
   </div>
