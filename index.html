@@ -17,19 +17,11 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 16px; }
 .hero h1 { font-size: 36px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.5px; }
 .hero .suffix { font-weight: 400; color: rgba(26,26,46,0.5); font-size: 28px; }
-.hero .tagline { font-size: 16px; color: rgba(26,26,46,0.7); margin: 6px 0 4px; font-weight: 400; }
+.hero .tagline { font-size: 15px; color: rgba(26,26,46,0.7); margin: 6px 0 4px; font-weight: 400; }
 .hero .locality { font-size: 14px; color: rgba(26,26,46,0.45); }
-
-/* Stats Bar */
-.stats { background: #1a1a2e; color: #fff; padding: 28px 0; }
-.stats .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center; }
-.stats .stat-num { font-size: 28px; font-weight: 700; color: #f5e6c8; }
-.stats .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
 
 /* Content */
 .content { padding: 48px 0; }
-
-/* Section */
 .section { margin-bottom: 40px; }
 .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #998e7a; margin-bottom: 20px; }
 
@@ -38,40 +30,55 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; col
 .about-card p { font-size: 15px; color: #444; margin-bottom: 14px; }
 .about-card p:last-child { margin-bottom: 0; }
 
-/* Cards grid */
+/* Cards */
 .card-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
 .card-grid-3 { display: grid; gap: 16px; grid-template-columns: 1fr 1fr 1fr; }
-.card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; transition: all 0.25s; }
+.card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #edeae2; transition: all 0.25s; display: block; }
 .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); transform: translateY(-2px); border-color: #d4c9a8; }
-.card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 18px; }
+a.card { text-decoration: none; color: inherit; }
+.card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 18px; flex-shrink: 0; }
 .card h3 { font-size: 16px; font-weight: 600; color: #1a1a2e; margin-bottom: 10px; }
 .card p, .card li { font-size: 13px; color: #555; line-height: 1.6; }
 .card ul { list-style: none; padding: 0; }
-.card li { padding: 4px 0; padding-left: 16px; position: relative; }
+.card li { padding: 3px 0; padding-left: 14px; position: relative; }
 .card li::before { content: '—'; position: absolute; left: 0; color: #d4c9a8; }
 
-/* Skill card colors */
 .card-icon.blue { background: #e8edf5; color: #1a73e8; }
 .card-icon.green { background: #e6f0ea; color: #2e7d5e; }
 .card-icon.amber { background: #f5efe0; color: #b8860b; }
 .card-icon.rose { background: #f5e8ea; color: #b34a5c; }
 .card-icon.indigo { background: #e8e8f5; color: #4a4ab3; }
 .card-icon.teal { background: #e0f0f0; color: #0d7373; }
+.card-icon.slate { background: #e8ecf0; color: #475569; }
 
 /* Milestones */
-.milestones { display: grid; gap: 16px; }
+.milestones { display: grid; gap: 12px; }
 .milestone { display: flex; gap: 16px; background: #fff; border-radius: 16px; padding: 24px 28px; border: 1px solid #edeae2; transition: all 0.25s; }
 .milestone:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #d4c9a8; }
-.milestone-year { font-size: 13px; font-weight: 700; color: #d4c9a8; white-space: nowrap; min-width: 70px; padding-top: 2px; }
+.milestone-year { font-size: 13px; font-weight: 700; color: #d4c9a8; white-space: nowrap; min-width: 80px; padding-top: 2px; }
 .milestone-content h3 { font-size: 15px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
-.milestone-content p { font-size: 13px; color: #555; line-height: 1.5; }
+.milestone-content p { font-size: 13px; color: #555; line-height: 1.55; }
+
+/* Publication items in card */
+.pub-list-compact { list-style: none; padding: 0; }
+.pub-list-compact li { font-size: 12px; color: #555; padding: 5px 0; line-height: 1.5; border-top: 1px solid #f0ece4; }
+.pub-list-compact li:first-child { border-top: none; }
+.pub-list-compact li em { font-style: italic; }
+.pub-list-compact li a { color: #1a73e8; text-decoration: none; font-weight: 500; }
+.pub-list-compact li a:hover { text-decoration: underline; }
+
+/* Conference items in card */
+.conf-list-compact { list-style: none; padding: 0; }
+.conf-list-compact li { font-size: 12px; color: #555; padding: 4px 0; line-height: 1.5; border-top: 1px solid #f0ece4; }
+.conf-list-compact li:first-child { border-top: none; }
+.conf-list-compact li b { color: #1a1a2e; }
 
 /* Placeholder */
 .placeholder { opacity: 0.6; position: relative; }
 .placeholder::after { content: 'Coming soon'; position: absolute; top: 16px; right: 16px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #998e7a; background: #f5f0e6; padding: 3px 10px; border-radius: 20px; }
 
 /* CV links row */
-.cv-row { display: flex; gap: 12px; margin-top: 8px; }
+.cv-row { display: flex; gap: 12px; margin-top: 16px; }
 .cv-row a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: #fff; border: 1px solid #edeae2; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 500; color: #1a1a2e; transition: all 0.2s; }
 .cv-row a:hover { border-color: #d4c9a8; background: #faf8f5; }
 
@@ -87,8 +94,6 @@ footer .copy { font-size: 12px; color: #aaa; }
   .hero { padding: 40px 0 32px; }
   .hero h1 { font-size: 28px; }
   .hero .suffix { font-size: 22px; }
-  .stats .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .stats .stat-num { font-size: 22px; }
   .card-grid, .card-grid-3 { grid-template-columns: 1fr; }
   .milestone { flex-direction: column; gap: 6px; }
   .milestone-year { min-width: auto; }
@@ -103,19 +108,8 @@ footer .copy { font-size: 12px; color: #aaa; }
   <div class="container">
     <img class="hero-photo" src="https://asiapowerwatch.com/wp-content/uploads/2020/10/Dharish-David.jpg" alt="Dharish David">
     <h1>Dharish David <span class="suffix">PhD</span></h1>
-    <p class="tagline">Associate Director · Research &amp; Consulting · Faculty</p>
+    <p class="tagline">Project Manager · Research Manager · Director · Academic / Lecturer</p>
     <p class="locality"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-1px;margin-right:3px"><path d="M8 0C5.2 0 3 2.2 3 5c0 3.8 5 11 5 11s5-7.2 5-11c0-2.8-2.2-5-5-5zm0 7.5C6.6 7.5 5.5 6.4 5.5 5S6.6 2.5 8 2.5 10.5 3.6 10.5 5 9.4 7.5 8 7.5z"/></svg> Singapore</p>
-  </div>
-</section>
-
-<section class="stats">
-  <div class="container">
-    <div class="grid">
-      <div><div class="stat-num">67</div><div class="stat-label">Projects</div></div>
-      <div><div class="stat-num">45</div><div class="stat-label">Countries</div></div>
-      <div><div class="stat-num">$1M+</div><div class="stat-label">Client Revenue</div></div>
-      <div><div class="stat-num">41</div><div class="stat-label">Clients</div></div>
-    </div>
   </div>
 </section>
 
@@ -126,8 +120,8 @@ footer .copy { font-size: 12px; color: #aaa; }
     <div class="section">
       <div class="section-title">About</div>
       <div class="about-card">
-        <p>Associate Director and Project Manager with 15+ years at the intersection of <strong>private sector research</strong>, <strong>policy analysis</strong>, <strong>academia</strong>, and <strong>AI-driven consulting</strong>. Leads multi-country engagements for governments, MNCs, and SMEs — delivering market intelligence, partnership strategy, and go-to-market execution across Asia, Africa, and the Middle East.</p>
-        <p>PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Former manager of a 25-person analyst team at Uzabase/SPEEDA. Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> (8 years). Policy research at <strong>ADBI</strong>, <strong>UN Global Compact</strong>, and <strong>ERIA</strong>.</p>
+        <p>Associate Director, Project Manager, and Research Manager with 15+ years operating at the intersection of <strong>private sector consulting</strong>, <strong>policy research</strong>, <strong>academia</strong>, and <strong>AI-driven transformation</strong>. Leads multi-country engagements for governments, MNCs, and SMEs — delivering market intelligence, partnership strategy, and go-to-market execution across Asia, Africa, and the Middle East.</p>
+        <p>PhD in Infrastructure Development and Financing from <strong>Waseda University, Japan</strong>. Former Director of a 25-person analyst team at Uzabase/SPEEDA. Faculty at <strong>SUSS</strong> and <strong>SIM-GE</strong> (8 years teaching political economy and research methodology). Policy researcher at <strong>ADBI</strong> (flagship studies on low-carbon green growth), <strong>UN Global Compact</strong> (sustainable finance strategy), and <strong>ERIA</strong> (private financing for low-carbon energy transition). Regular contributor to <em>SCMP</em>, <em>East Asia Forum</em>, and <em>Global Policy</em>.</p>
       </div>
     </div>
 
@@ -143,7 +137,7 @@ footer .copy { font-size: 12px; color: #aaa; }
           <h3>Market &amp; Industry Research</h3>
           <ul>
             <li>Multi-sector research across 16 verticals (SIC/HS code)</li>
-            <li>Market sizing &mdash; TAM-SAM-SOM analysis, RAS/IPF sampling</li>
+            <li>Market sizing &mdash; TAM-SAM-SOM, RAS/IPF sampling</li>
             <li>Competitive intelligence, regulatory analysis, due diligence</li>
             <li>Primary research: KOL interviews, focus groups, field surveys</li>
           </ul>
@@ -156,7 +150,7 @@ footer .copy { font-size: 12px; color: #aaa; }
           <h3>Strategy &amp; Partnerships</h3>
           <ul>
             <li>Go-to-market strategy and business development</li>
-            <li>Strategic partnerships &amp; M&amp;A partner search (India, KSA, Africa)</li>
+            <li>Strategic partnerships &amp; M&amp;A partner search</li>
             <li>Geographic expansion: MENA, sub-Saharan Africa, SE Asia</li>
             <li>Stakeholder engagement: government, MNC, multilateral</li>
           </ul>
@@ -184,31 +178,23 @@ footer .copy { font-size: 12px; color: #aaa; }
             <li>100+ researcher network across 20+ countries</li>
             <li>Cost-management &amp; real-time profitability tracking</li>
             <li>Freelancer platform strategy (Stoke/Fiverr/Upwork)</li>
-            <li>Training academy, QA checkpoints, 360 feedback systems</li>
+            <li>Training academy, SOPs, QA checkpoints, 360 feedback</li>
           </ul>
         </div>
 
       </div>
     </div>
 
-    <!-- Milestones -->
+    <!-- Career Milestones (reverse chronological) -->
     <div class="section">
       <div class="section-title">Career Milestones</div>
       <div class="milestones">
 
         <div class="milestone">
-          <div class="milestone-year">2011</div>
+          <div class="milestone-year">2022–26</div>
           <div class="milestone-content">
-            <h3>PhD in Infrastructure Development &amp; Financing</h3>
-            <p>Waseda University, Tokyo, Japan. Dissertation on public-private partnerships and infrastructure finance in Asia. Research Associate at ADBI on flagship publications for Asia's development agenda.</p>
-          </div>
-        </div>
-
-        <div class="milestone">
-          <div class="milestone-year">2014–16</div>
-          <div class="milestone-content">
-            <h3>Research Manager, Uzabase/SPEEDA</h3>
-            <p>Led 25-person analyst team across Singapore and Tokyo. Directed production of 100+ industry reports annually for institutional investors. Built team capability through structured training programmes.</p>
+            <h3>Associate Director, Global Angle</h3>
+            <p>Delivered <strong>$1M+ in client revenue</strong> across 67 projects in 45 countries for 41 clients by building operational infrastructure from scratch — AI integration strategy (50+ function displacement matrix), Data-as-a-Service framework (3-tier), AppSheet cost-tracker, end-to-end SOP library, and 100+ local researcher network across 20 countries reducing costs by 20-30%. Sourced strategic partnerships across India (Knometrix), KSA, Mauritius, and Turkey, enabling multi-country delivery capability and new revenue streams. EMIS panel speaker on AI in market research.</p>
           </div>
         </div>
 
@@ -216,54 +202,85 @@ footer .copy { font-size: 12px; color: #aaa; }
           <div class="milestone-year">2021</div>
           <div class="milestone-content">
             <h3>Manager, UN Global Compact Network Singapore</h3>
-            <p>Developed Singapore's inaugural sustainable finance strategy. Co-developed NTU Sustainable Finance short course. Led flagship research on responsible supply chains and green finance across ASEAN.</p>
+            <p>Developed Singapore's inaugural sustainable finance strategy and social sustainability framework by leading multi-stakeholder engagement across government, corporate, and academic partners. Co-delivered NTU Sustainable Finance short course reaching 100+ professionals. Produced two flagship research publications on responsible supply chains and green fintech across ASEAN — building organisational capability at the intersection of ESG, policy, and private sector action.</p>
           </div>
         </div>
 
         <div class="milestone">
-          <div class="milestone-year">2022–26</div>
+          <div class="milestone-year">2014–16</div>
           <div class="milestone-content">
-            <h3>Associate Director, Global Angle</h3>
-            <p>Delivered <strong>$1M+ in client revenue</strong> across 67 projects in 45 countries. Built operational infrastructure from scratch: AI strategy, DaaS framework, SOP library, AppSheet tracker, 100+ researcher network, strategic partnerships across India, KSA, Mauritius, and Turkey. EMIS panel speaker on AI in market research.</p>
+            <h3>Research Manager / Director, Uzabase/SPEEDA</h3>
+            <p>Directed production of 100+ industry reports annually for institutional investors by managing a 25-person analyst team across Singapore and Tokyo. Implemented structured training programmes and workflow improvements across 16 industry verticals (SIC/HS code) that enhanced report quality, team capability, and production efficiency for the SPEEDA platform.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-year">2010–12</div>
+          <div class="milestone-content">
+            <h3>Research Associate, ADB Institute (ADBI), Tokyo</h3>
+            <p>Contributed to ADBI flagship studies including the <strong>Low Carbon Green Growth in Asia (LCGA)</strong> publication by managing the full research lifecycle — concept note development, data collection and quantitative analysis, commissioning and QA of background papers, conference production, and case study preparation. Liaised with government policymakers and researchers across Asia to produce evidence-based policy research for the region's development agenda.</p>
+          </div>
+        </div>
+
+        <div class="milestone">
+          <div class="milestone-year">2011</div>
+          <div class="milestone-content">
+            <h3>PhD in Infrastructure Development &amp; Financing</h3>
+            <p>Waseda University, Tokyo, Japan. Dissertation on public-private partnerships and infrastructure finance in Asia. Teaching Associate at Waseda's Graduate School of Asia Pacific Studies (2006–09). Research on Japanese and Indian highway development published in the Journal of Infrastructure Development (Sage).</p>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- Cards row -->
+    <!-- Portfolio -->
     <div class="section">
       <div class="section-title">Portfolio</div>
       <div class="card-grid-3">
 
-        <a class="card" href="detailed-cv.html#publications" style="text-decoration:none;color:inherit">
+        <a class="card" href="detailed-cv.html#publications">
           <div class="card-icon indigo">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
           </div>
           <h3>Publications</h3>
-          <p>Peer-reviewed articles, white papers, and op-eds on green fintech, responsible supply chains, AI governance, and political economy of Asia.</p>
+          <ul class="pub-list-compact">
+            <li>David Dharish (2026). Geoeconomics of renewable energy in South and Central Asia using PPPs. <em>CAREC Institute.</em> <a href="https://www.carecinstitute.org/publications/carec-institute-releases-report-on-renewable-energy-cooperation-in-south-and-central-asia/" target="_blank">Link</a></li>
+            <li>David, D., Rajeshwari, B., &amp; S., T. (2025). Algorithmic Bias and Discrimination in India. <em>Journal of Development Policy and Practice.</em> <a href="https://doi.org/10.1177/24551333251343358" target="_blank">Link</a></li>
+            <li>David Dharish and Abhishek Pandey (2025). <em>China's Assertive Posturing in the Indo-Pacific &amp; Prospects for Indo-ASEAN Collaboration.</em> KW Publishers. <a href="http://kwpub.in/Home/product/9788198096302/china-s-assertive-posturing-in-the-indo-pacific-@-prospects-for-indo-asean-collaboration" target="_blank">Link</a></li>
+            <li>GoImpact, CUHK Business School, and Ant Group (2023). <em>The Intersection of Green, Fin, and Tech: A Study across 5 APEC Economies.</em> (Lead author). <a href="https://www.researchgate.net/publication/375878677_The_Intersection_of_Green_Fin_and_Tech_A_Study_across_5_APEC_Economies_GoImpact_CUHK_Business_School_2023" target="_blank">Link</a></li>
+            <li>GCNS and Accenture (2022). <em>Building Responsible and Resilient Supply Chains in ASEAN.</em> (Lead author). <a href="https://www.researchgate.net/publication/369801110_Building_Responsible_And_Resilient_Supply_Chains_In_ASEAN" target="_blank">Link</a></li>
+            <li style="border:none;padding-top:8px;"><a href="detailed-cv.html#publications" style="font-size:12px;font-weight:600;color:#1a73e8;text-decoration:none;">View all publications &rarr;</a></li>
+          </ul>
         </a>
 
-        <div class="card placeholder">
+        <a class="card" href="detailed-cv.html#conferences">
           <div class="card-icon teal">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
           <h3>Conferences &amp; Workshops</h3>
-          <p>Panelist and speaker at UNDP, ERIA, ADBI, EMIS, CAREC Institute, and university-hosted conferences across Asia.</p>
-        </div>
+          <ul class="conf-list-compact">
+            <li><b>2025</b> — EMIS Transforming Data Analysis &amp; Insights Event. Speaker/Panelist: AI and market research in Asia. Singapore.</li>
+            <li><b>2025</b> — 9th CAREC Think Tank Development Forum. "Renewable Energy Cooperation Between Central and South Asia." Urumqi, China.</li>
+            <li><b>2025</b> — CAREC Institute Policy Workshop: Advancing the Green Transition in CAREC. Speaker. Online.</li>
+            <li><b>2024</b> — UNDP South-South Cooperation Knowledge Series: Energizing Green Investment in the Pacific. Panelist. Online.</li>
+            <li><b>2024</b> — ERIA Carbon Tax Conference. Country Expert: Carbon Pricing in Singapore. Jakarta.</li>
+            <li><b>2024</b> — 6th Digital Citizenship Summit. "Algorithmic Bias and Discrimination in India." Hyderabad.</li>
+            <li style="border:none;padding-top:8px;"><a href="detailed-cv.html#conferences" style="font-size:12px;font-weight:600;color:#1a73e8;text-decoration:none;">View all conferences &rarr;</a></li>
+          </ul>
+        </a>
 
         <div class="card placeholder">
-          <div class="card-icon amber">
+          <div class="card-icon slate">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <h3>Projects</h3>
-          <p>67 multi-country engagements spanning market intelligence, feasibility studies, regulatory analysis, and partnership strategy.</p>
+          <p>67 multi-country engagements spanning market intelligence, feasibility studies, regulatory analysis, and partnership strategy across 45 countries. Detail and case studies being developed.</p>
         </div>
 
       </div>
       <div class="cv-row">
-        <a href="short-cv.html">View Short CV &rarr;</a>
-        <a href="detailed-cv.html">View Detailed CV &rarr;</a>
+        <a href="short-cv.html">Short CV &rarr;</a>
+        <a href="detailed-cv.html">Detailed CV &rarr;</a>
       </div>
     </div>
 
