@@ -1,4 +1,3 @@
 # dharishdavid.github.io
-Personal CV site
+[Personal CV site](https://dharishdavid.github.io)
 
-<a href="https://dharishdavid.github.io" target="_
